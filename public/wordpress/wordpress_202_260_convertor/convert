@@ -1,0 +1,16 @@
+#!/bin/sh
+
+WP_USR='root'
+WP_PWD='<password>'
+WP_DB='whomwah_new'
+NEW_DB_SQL='wp26.sql'
+MIGRATION_SQL='migrate.sql'
+
+echo "Build new empty database"
+mysqladmin -f -u$WP_USR -p$WP_PWD drop $WP_DB
+mysqladmin -u$WP_USR -p$WP_PWD create $WP_DB
+echo "Add wordpress 2.6 schema"
+mysql -u$WP_USR -p$WP_PWD $WP_DB < $NEW_DB_SQL
+echo "Load migration SQL"
+mysql -u$WP_USR -p$WP_PWD $WP_DB < $MIGRATION_SQL
+echo "Done!"

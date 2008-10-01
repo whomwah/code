@@ -1,0 +1,10 @@
+body
+{
+  font: 80% Arial, Verdana;
+  margin:30px;
+}  
+canvas
+{
+  background-color:#e7e7e7;
+  border:1px solid #999;
+}

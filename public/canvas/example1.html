@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <head>     
+  <link href="canvas.css" media="screen" rel="Stylesheet" type="text/css" />
+  <script type="application/x-javascript">     
+    function init()
+    {
+      friction = 0.98;
+      ratio = .3;
+      homeX = 300;
+      homeY = 100;   
+      againX = againY = lineX = lineY = tempX = tempY = speedX = speedY = 0;      
+      var start = setInterval("draw()", 35);  
+      canvas = document.getElementById("my_canvas").getContext('2d');     
+    }    
+
+    function draw()
+    {                 
+      canvas.clearRect(0, 0, 600, 200); 
+    	speedX = (speedX*friction)+(homeX-againX)*ratio;
+    	speedY = (speedY*friction)+(homeY-againY)*ratio;            	  
+      canvas.beginPath(); 
+      canvas.lineWidth = 8;
+      canvas.lineCap = "round";
+      canvas.strokeStyle = "grey";
+    	canvas.moveTo(20, 100);
+    	againX = againX + speedX;
+    	againY = againY + speedY;
+    	canvas.quadraticCurveTo(againX, againY, 580, 100); 
+    	canvas.stroke();             
+    }   
+     
+    window.onload = init;
+   </script>
+ </head>
+ <body>
+   <h1><a href="http://developer.mozilla.org/en/docs/Category:HTML:Canvas">Canvas</a> experiment #1</h1>
+   <h2>Elastic</h2>
+   <canvas id="my_canvas" width="600" height="200"></canvas> 
+   <p>Examples from the post <a href="http://whomwah.com/2005/11/29/some-canvas-experiments">Some canvas tag experiments</a></p>
+ </body>
+</html>

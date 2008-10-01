@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <head>     
+  <link href="canvas.css" media="screen" rel="Stylesheet" type="text/css" />
+  <script type="application/x-javascript">     
+    function init()
+    {
+      speedX = 2;
+      speedY = 2;
+      ballX = 20;
+      ballY = 20;
+      ballRadius = 20;      
+      var start = setInterval("draw()", 35);  
+      canvas = document.getElementById("my_canvas").getContext("2d");     
+    }    
+
+    function draw()
+    {                 
+      canvas.clearRect(0, 0, 600, 200);         
+    	ballX += speedX;
+    	ballY += speedY;    
+    	
+    	if (ballX > 600-ballRadius) {
+    		speedX = -speedX;
+    	}
+    	if (ballX < 0+ballRadius) {
+    		speedX = speedX*-1;
+    	}
+    	if (ballY > 200-ballRadius) {
+    		speedY = -speedY;
+    	}
+    	if (ballY < 0+ballRadius) {
+    		speedY = speedY*-1;
+    	}  
+    	
+      canvas.fillStyle = 'black';
+      canvas.beginPath();
+      canvas.arc(ballX,ballY,ballRadius,0,Math.PI*2,true);
+      canvas.fill();            
+    }   
+     
+    window.onload = init;
+   </script>
+ </head>
+ <body>
+   <h1><a href="http://developer.mozilla.org/en/docs/Category:HTML:Canvas">Canvas</a> experiment #2</h1>
+   <h2>Bounce</h2>
+   <canvas id="my_canvas" width="600" height="200"></canvas> 
+   <p>Examples from the post <a href="http://whomwah.com/2005/11/29/some-canvas-experiments">Some canvas tag experiments</a></p>
+ </body>
+</html>
