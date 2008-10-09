@@ -2,9 +2,11 @@
 
 require "rubygems"
 require "xmpp4r-simple"
-require "simple-rss"
-require "open-uri"
 require "getoptlong"
+require 'json'
+require 'time'
+require 'net/http'
+require 'cgi'
 
 
 # A simple app that takes your last Twitters from the last
@@ -14,13 +16,13 @@ require "getoptlong"
 # them simply
 #
 # example:
-#  ./twammer -t 47983 -u test@gmail.com -p password -f bbc
+#  ./twammer -t user:pass -j user:pass -f bbc
 #
 # Step though the above:
 # 
 # 1. Twammer is run every 5 mins via cron
 # 2. I post a message to Twitter with #bbc at the end of the message
-# 3. Twammer checks for your last twitters in last 5 mins
+# 3. Twammer checks for your last twitters in last 5 mins (default)
 # 4. Twammer filters the messages with #bbc at the end
 # 5. Twammer sends those messages onto Yammer with #bbc removed
 # 
@@ -28,32 +30,29 @@ require "getoptlong"
 
 def options
   opts = GetoptLong.new( 
-    [ "--rsstwitter",   "-t", GetoptLong::REQUIRED_ARGUMENT ],
-    [ "--userjabber",   "-u", GetoptLong::REQUIRED_ARGUMENT ],
-    [ "--passjabber",   "-p", GetoptLong::REQUIRED_ARGUMENT ],
+    [ "--uptwitter",    "-t", GetoptLong::REQUIRED_ARGUMENT ],
+    [ "--upjabber",     "-j", GetoptLong::REQUIRED_ARGUMENT ],
     [ "--delay",        "-d", GetoptLong::OPTIONAL_ARGUMENT ],
     [ "--filter",       "-f", GetoptLong::OPTIONAL_ARGUMENT ],
     [ "--help",         "-h", GetoptLong::NO_ARGUMENT ],
-    [ "--check",        "-c", GetoptLong::NO_ARGUMENT ]
+    [ "--quiet",        "-q", GetoptLong::NO_ARGUMENT ]
   )
   
   def printusage(error_code)
     print "twammer -- Send your Twitters to Yammer\n"
-    print "Usage: ./twammer -t STRING -u STRING -p STRING [OPTIONS]\n"
+    print "Usage: ./twammer -t STR:STR -j STR:STR [OPTIONS]\n"
     print "\n"
     print "Allowed options:\n"
-    print "    -t, --rsstwitter STRING   Twitter RSS <ID>\n"
-    print "                              twitter.com/statuses/user_timeline/<ID>.rss\n"
-    print "    -u, --userjabber STRING   Jabber username setup with Yammer IM\n"
-    print "    -p, --passjabber STRING   Jabber password setup with Yammer IM\n"
-    print "    -d, --delay MINUTES       How far to look back for tweets (default: 5mins)\n"
-    print "    -f, --filter STRING       Only send on messages with #<filter> in\n"
-    print "    -h, --help                Shows this help\n"
-    print "    -c, --check               Display, but don't actually send messages\n"
+    print "    -t, --uptwitter STR    Twitter user:pass\n"
+    print "    -j, --upjabber STR     Jabber user:pass setup with Yammer IM\n"
+    print "    -d, --delay MINUTES    How far to look back for tweets (default: 5mins)\n"
+    print "    -f, --filter STR       Only send on messages with #<filter> in\n"
+    print "    -h, --help             Shows this help\n"
+    print "    -q, --quiet            Display, but don't actually send messages\n"
     print "\n"
     print "Examples:\n"
-    print "    ./twammer -t 47983 -u user@gmail.com -p mypassword -f bbc\n"
-    print "    ./twammer -t 47983 -u user@gmail.com -p mypassword -d 10 -c\n"
+    print "    ./twammer -t me@foo.com:mypass -j me@bar.com:mypass1 -f bbc\n"
+    print "    ./twammer -t me@foo.com:mypass -j me@bar.com:mypass1 -d 10 -q\n"
     print "\n"
     exit(error_code)
   end
@@ -64,22 +63,16 @@ def options
     opts.each do |opt, arg|
 
       case opt
-      when "--rsstwitter"
-        o[:rsstwitter] = arg
-        if o[:rsstwitter].nil?
-          puts "Arg Missing --rsstwitter required"
+      when "--uptwitter"
+        o[:tuser], o[:tpass] = arg.split(':')
+        if o[:tuser].nil? or o[:tpass].nil?
+          puts "Arg Missing --uptwitter required"
           exit 0
         end
-      when "--userjabber"
-        o[:userjabber] = arg
-        if o[:userjabber].nil?
-          puts "Arg Missing --userjabber required"
-          exit 0
-        end
-      when "--passjabber"
-        o[:passjabber] = arg
-        if o[:passjabber].nil?
-          puts "Arg Missing --passjabber required"
+      when "--upjabber"
+        o[:juser], o[:jpass] = arg.split(':')
+        if o[:juser].nil? or o[:jpass].nil?
+          puts "Arg Missing --upjabber required"
           exit 0
         end
       when "--delay"
@@ -88,7 +81,7 @@ def options
         o[:filter] = arg || nil 
       when "--help"
         printusage(0)
-      when "--check"
+      when "--quiet"
         o[:quiet] = true
       end
 
@@ -104,40 +97,56 @@ if __FILE__ == $0
 
   opts = options
 
-  twitterrss = "http://twitter.com/statuses/user_timeline/#ID#.rss"
+  response = nil
   yammer_bot = "yammer@chat.yammer.com" 
-  delay_in_seconds = opts.has_key?(:delay) ? opts[:delay].to_i * 60 : (5*60)
   filter = "##{opts[:filter]}" if opts[:filter]
+  delay_in_seconds = opts.has_key?(:delay) ? opts[:delay].to_i * 60 : (5*60)
+  since = CGI.escape((Time.now - delay_in_seconds ).httpdate)
 
-  # fetch RSS
-  rss_items = SimpleRSS.parse open(twitterrss.gsub("#ID#", opts[:rsstwitter]))
-  messages = rss_items.items.sort {|a,b| a.pubDate<=>b.pubDate}
-  # find items added in the last n minutes
-  messages = messages.map {|m| m.title if m.pubDate > Time.now - delay_in_seconds}.compact
-  # remove the <user>: from start of message
-  messages = messages.map {|m| m.split(":", 2).last.strip }
-  # filter if filter supplied
-  unless opts[:filter].nil?
-    messages = messages.map {|m| m.gsub!(/#{filter}$/, '') }.compact
-  end
-  
-  unless messages.empty?
+  # make the request to twitter for messages
+  Net::HTTP.start('www.twitter.com') {|http|
+    req = Net::HTTP::Get.new("/statuses/user_timeline.json?since=#{since}")
+    req.basic_auth opts[:tuser], opts[:tpass] 
+    response = http.request(req)
+  }
 
-    # now send them to Yammer  
-    im = Jabber::Simple.new(opts[:userjabber], opts[:passjabber]) unless opts[:quiet]
+  case response
+  when Net::HTTPSuccess
+    # parse the returned data and stick in array 
+    messages = JSON.parse(response.body)
+    # convert to array of messages
+    messages.map! {|m| m["text"] }
 
-    # loop through results and send
-    for m in messages 
-     # send message
-     im.deliver(yammer_bot , m) unless opts[:quiet]
-     puts "sent .. #{m}"
-     #sleep for a few seconds
-     sleep(3)
+    # filter if filter supplied
+    if !opts[:filter].nil? or !messages.empty?
+      messages = messages.map {|m| m.gsub!(/#{filter}$/, '') }.compact
     end
 
-    # disconnect
-    im.disconnect unless opts[:quiet]
+    # only carry on if there are messages
+    unless messages.empty?
 
+      # ignore messages that are replies i.e start with @
+      messages = messages.map {|m| m.strip unless m[0...1] == '@' }
+
+      # now send them to Yammer  
+      im = Jabber::Simple.new(opts[:juser], opts[:jpass]) unless opts[:quiet]
+
+      # loop through results and send
+      for m in messages.compact 
+        # send message
+        im.deliver(yammer_bot , m) unless opts[:quiet]
+        puts "sent .. #{m}"
+        # sleep for a few seconds, not really required, but means
+        # that the tweets send get spread out a little 
+        sleep(5)
+      end
+
+      # disconnect
+      im.disconnect unless opts[:quiet]
+
+    end
+  else
+    response.error!
   end
 
 end
