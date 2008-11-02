@@ -1,0 +1,378 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'jabber/bot'
+require 'json'
+require 'yaml'
+require 'net/http'
+require 'daemons'
+require 'time'
+
+# I tend to keep all my config stuff in one place.
+# You don't have to and can just delete the line
+# below and replace all the CONFIG entries with
+# the informaion directly
+CONFIG = YAML::load(File.read('/home/duncan/configs/bbcbot.yaml'))
+
+# Last updated
+LAST_UPDATED = File.new(File.expand_path(__FILE__)).mtime
+
+# Extensions to save repetition
+class BBC
+
+  JABBERID = CONFIG[:settings][:jabberid] 
+  PASSWORD = CONFIG[:settings][:password] 
+  MASTER   = CONFIG[:settings][:master] 
+  DOMAIN   = 'www.bbc.co.uk'
+  VERSION  = '0.9.1'
+
+  class <<self
+    def http_fetch(url)
+      Net::HTTP.start(DOMAIN) {|http|
+        req = Net::HTTP::Get.new(url)
+        http.request(req)
+      }
+    end
+
+    def http_fetch_head(url)
+      Net::HTTP.start(DOMAIN) {|http|
+        http.head(url)
+      }
+    end
+
+    def parse_now(str)
+      json = JSON.parse(str)
+      p = json["schedule"]["now"]["broadcast"]["programme"] 
+      parse_programme(p)
+    end
+
+    def parse_next(str)
+      json = JSON.parse(str)
+      p = json["schedule"]["next"]["broadcasts"][0]["programme"] 
+      parse_programme(p)
+    end
+
+    def parse_programme(data)
+      p = data
+      st = p["display_titles"]["subtitle"]
+      res = []
+      res << "#{p["display_titles"]["title"]} :: #{p["short_synopsis"]}"
+      res << "http://#{DOMAIN}/programmes/#{p["pid"]}"
+      res.compact.join("\n")
+    end
+
+    def parse_schedule(str, full_txt)
+      json = JSON.parse(str)
+      date = Time.parse(json["schedule"]["day"]["date"])
+      title = "#{json["schedule"]["service"]["title"]} Schedule, #{date.strftime("%A %d %B %Y")}\n"
+      bcasts = json["schedule"]["day"]["broadcasts"] 
+      res = []
+      res << title
+      for b in bcasts
+        p = b["programme"]
+        title = p["display_titles"]["title"]
+        s = Time.parse(b["start"])
+        e = Time.parse(b["end"])
+        res << "#{s.strftime("%H:%M")}-#{e.strftime("%H:%M")} #{title}"  
+        if full_txt
+          res << p["short_synopsis"]
+          res << "http://#{DOMAIN}/programmes/#{p["pid"]}"
+        end
+      end
+      res.compact.join("\n")
+    end
+
+    def parse_services(str, in_full)
+      json = JSON.parse(str)
+      services = json["services"]
+      ol_txt = " OL = has outlets." unless in_full
+      res = [ "Available services.#{ol_txt}\n" ]
+      for s in services
+        op = "#{s["key"]} , [#{s["title"]}]"
+        outlets = s["outlets"]
+        if !outlets.nil? 
+          op = op + " OL"
+        end
+        res << op
+        next if !in_full or outlets.nil?  
+        for ol in outlets
+          res << "  #{ol["key"]} , [#{ol["title"]}]"
+        end
+      end
+      res.compact.join("\n")
+    end
+
+    def parse_outlets(str, filter)
+      json = JSON.parse(str)
+      services = json["services"]
+      for s in services
+        if filter == s["key"]
+          res = [ "Outlets for #{s["title"]}\n" ]
+          outlets = s["outlets"]
+          return "No outlets for this service" if outlets.nil?
+          for ol in outlets
+            res << "#{ol["key"]} , [#{ol["title"]}]"
+          end
+        end
+      end
+      res.compact.join("\n")
+    end
+
+    def parse_upcoming(str, categories, network, in_full)
+      json = JSON.parse(str)
+      bcasts = json["broadcasts"]
+      res = []
+      n = " on #{network.gsub('/','')}" unless network.nil?
+      res << "Here's some upcoming #{categories}#{n} :-"
+      last_date = last_pid = nil
+      for b in bcasts
+        p = b["programme"]
+        # store the pid
+        pid = p["pid"]
+        next if pid == last_pid
+        # store start and end dates
+        date = Time.parse(b["start"]).strftime("%A %d %B %Y")
+        s = Time.parse(b["start"]).strftime("%H:%M")
+        e = Time.parse(b["end"]).strftime("%H:%M")
+        # store the service
+        service = " #{b["service"]["key"]} [#{b["service"]["title"]}]" unless network
+        # build the result
+        res << "\n" + date + ' :-' unless last_date == date    
+        desc = " :: #{p["short_synopsis"]}#{service}" if in_full
+        res << "#{s}-#{e} #{p["display_titles"]["title"]}#{desc}"
+        res << "http://#{DOMAIN}/programmes/#{pid}" if in_full 
+        last_date = date
+        last_pid = pid
+      end
+      res.compact.join("\n")
+    end
+
+    def schoolboy_error(t) 
+      txt = ["Oops! Check your spelling, I can't quite understand what you're asking for."]
+      txt << "Maybe that network may require an <outlet>, use the command: services " \
+             "to double check." if t.nil?
+      txt.join(' ')
+    end
+  end
+end
+
+# Create our new bot
+bot = Jabber::Bot.new(
+  :name      => 'BBC Programmes',
+  :jabber_id => BBC::JABBERID, 
+  :password  => BBC::PASSWORD, 
+  :master    => BBC::MASTER,
+  :status    => 'BBC Programmes available',
+  :is_public => true
+)
+
+# version information
+bot.add_command(
+  :syntax      => 'version',
+  :preamble    => 'Current version and when last updated',
+  :description => "Displays the current version of the script\n" + 
+                  "running and when it was last updated", 
+  :regex       => /^version(\s+)?$/,
+  :alias       => [ 
+    :syntax => 'v', 
+    :regex => /^v$/
+  ],
+  :is_public   => true
+) do |sender, message|
+  "Version: #{BBC::VERSION}\nLast Updated: #{LAST_UPDATED}"
+end
+
+# Now
+bot.add_command(
+  :syntax      => 'now <network>[:<outlet>]',
+  :preamble    => 'Displays which programme is currenly on',
+  :description => "Displays information about which programme\n" + 
+                  "is currently being broadcast on the <network>\n" + 
+                  "you provided, as well as providing a link to\n" + 
+                  "that programmes's webpage. Example usage:\n" +
+                  "now radio1\n" +
+                  "now 6music\n" +
+                  "now bbcone:london",
+  :regex       => /^now\s[a-z0-9]+\:?[a-z0-9]+?$/,
+  :is_public   => true
+) do |sender, message|
+
+  network, outlet = message.split(":")
+  outlet = outlet + '/' unless outlet.nil?
+
+  response = BBC.http_fetch("/#{network}/programmes/schedules/#{outlet}upcoming.json")
+
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_now(response.body)
+  else
+    BBC.schoolboy_error(outlet)
+  end
+end
+
+# Next
+bot.add_command(
+  :syntax      => 'next <network>[:<outlet>]',
+  :preamble    => 'Displays which programme is next on',
+  :description => "Displays information about which programme\n" + 
+                  "is next being broadcast on the <network> you\n" +
+                  "provided, as well as displaying a link to\n" +
+                  "that programmes's webpage. Example usage:\n" +
+                  "next radio1\n" +
+                  "next 6music\n" +
+                  "next bbcone:london",
+  :regex       => /^next\s[a-z0-9]+\:?[a-z0-9]+?$/,
+  :is_public   => true
+) do |sender, message|
+
+  network, outlet = message.split(":")
+  outlet = outlet + '/' unless outlet.nil?
+
+  response = BBC.http_fetch("/#{network}/programmes/schedules/#{outlet}upcoming.json")
+
+  # handle the response
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_next(response.body)
+  else
+    BBC.schoolboy_error(outlet)
+  end
+end
+
+# Schedule
+bot.add_command(
+  :syntax      => 'schedule <network>[:<outlet>][ in full]',
+  :preamble    => 'Displays a full day schedule',
+  :description => "Displays a full day schedule for the <network>\n" +
+                  "you provided. By default you get a quick view,\n" +
+                  "but by adding 'in full' at the end you will get\n" +
+                  "more detailed information about each programme.\n" +
+                  "Example usage:\n" +
+                  "schedule 6music\n" +
+                  "schedule radio4:fm\n" +
+                  "schedule bbcone:london in full\n" +
+                  "schedule radio1 in full",
+  :regex       => /^schedules?\s[a-z0-9]+(\:[a-z0-9]+)?(\sin full)?$/,
+  :is_public   => true
+) do |sender, message|
+
+  params, in_full = message.strip.split(' ', 2)
+  network, outlet, date = params.strip.split(":").map { |p| p.strip }
+  outlet = "/#{outlet}" unless outlet.nil?
+  in_full = (in_full.nil? or in_full.size == 0) ? false : true
+
+  response = BBC.http_fetch("/#{network}/programmes/schedules#{outlet}.json")
+
+  # handle the response
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_schedule(response.body, in_full)
+  else
+    BBC.schoolboy_error(outlet)
+  end
+end
+
+# Services
+bot.add_command(
+  :syntax      => 'services [in full]',
+  :preamble    => 'Displays a full list of networks',
+  :description => "Displays a full list of available networks\n" +
+                  "<network> that can be used with many of the\n" +
+                  "other commands I understand. Some networks\n" +
+                  "require an outlet too, which can be found via\n" +
+                  "the outlets commands. Example usage:\n" +
+                  "services\n" +
+                  "services in full",
+  :regex       => /^services(\s+)?(\sin full)?$/,
+  :is_public   => true
+) do |sender, message|
+
+  in_full = (message.nil? or message.size == 0) ? false : true
+
+  response = BBC.http_fetch("/programmes/services.json")
+
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_services(response.body, in_full)
+  else
+    "Hmm, strange, nothing found!"
+  end
+end
+
+# Outlets
+bot.add_command(
+  :syntax      => 'outlets <network>',
+  :preamble    => 'Displays all the available outlets for a <network>',
+  :description => "Displays all the available outlets for a\n" +
+                  "<network>. This is because an <outlet> is\n" +
+                  "required for some network where there is more\n" +
+                  "than one variation, for example:\n" + 
+                  "radio4 requires fm or lw to be decided, or\n" + 
+                  "bbcone has many regional variations\n" +
+                  "You can tell if a <network> requires outlets, by\n" +
+                  "using the services command and looking for OL\n" +
+                  "next to the results. Example usage:\n" +
+                  "outlets bbcone\n" +
+                  "outlets bbctwo\n" +
+                  "outlets radio1",
+  :regex       => /^outlets\s[a-z0-9]+?$/,
+  :is_public   => true
+) do |sender, message|
+
+  response = BBC.http_fetch("/programmes/services.json")
+
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_outlets(response.body, message)
+  else
+    "Hmm, strange, nothing found!"
+  end
+end
+
+# upcoming
+
+bot.add_command(
+  :syntax      => 'upcoming <string>[:<string>][ on <network>][ in full]',
+  :preamble    => 'List upcoming programmes',
+  :description => "List upcoming programmes belonging to the\n" +
+                  "<genre> or <format> passed in. You can also\n" +
+                  "optionally filter by <network>. Add 'in full' at\n" +
+                  "the end of the command gives you more information\n" +
+                  "about each programmes. Example usage:\n" +
+                  "upcoming films\n" +
+                  "upcoming drama:crime\n" +
+                  "upcoming sport on bbcone\n" +
+                  "upcoming drama:soaps on bbcone in full",
+  :regex       => /^upcoming\s[a-z]+(\:[a-z]+)?(\:[a-z]+)?(\son\s[a-z0-9]+)?(\sin full)?$/,
+  :is_public   => true
+) do |sender, message|
+
+  in_full = message =~ /\sin full$/ ? true : false
+  message = message.gsub(' in full', '').strip if in_full 
+  args1, network = message.split(/\bon\b/).map {|a| a.strip} 
+  filters = args1.split(':').map { |f| f.strip }.join('/') 
+  network = '/' + network unless network.nil?
+  genre_url = "#{network}/programmes/genres/#{filters}/schedules/upcoming.json"  
+  formt_url = "#{network}/programmes/formats/#{filters}/schedules/upcoming.json"  
+
+  # do a head request to see if the first exists, if not do the full request with the other
+  case BBC.http_fetch_head(genre_url)
+  when Net::HTTPSuccess
+    response = BBC.http_fetch(genre_url)
+  else
+    response = BBC.http_fetch(formt_url)
+  end
+
+  # now filer of we have anything useful
+  case response
+  when Net::HTTPSuccess
+    BBC.parse_upcoming(response.body, filters, network, in_full)
+  else
+    "Hmm, strange, nothing found!"
+  end
+end
+
+# Daemonize and bring your new bot to life
+Daemons.run_proc('bbcbot', { :dir_mode => :normal, :dir => '/tmp' }) do
+  bot.connect
+end

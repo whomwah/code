@@ -1,0 +1,39 @@
+#! /bin/sh
+#
+# chkconfig:   2345 50 50
+# description: Whomwah IM bot 
+
+# source function library
+ . /etc/rc.d/init.d/functions
+
+PROG=whomwahbot
+BASE=/home/duncan/bin/$PROG
+RETVAL=0
+
+case "$1" in
+  start)
+    echo -n $"Starting $PROG: "
+    daemon --check $PROG nohup $BASE $PROG $OPTIONS &
+    RETVAL=$?
+    [ $RETVAL -eq 0 ] && touch /var/lock/subsys/$PROG
+    echo
+    ;;
+  stop)
+    echo -n $"Shutting down $PROG: "
+    killproc $BASE
+    RETVAL=$?
+    [ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/$PROG
+    echo
+    ;;
+  restart|force-reload)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|force-reload}" >&2
+    exit 1
+    ;;
+esac
+
+exit 0

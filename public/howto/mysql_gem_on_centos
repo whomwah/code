@@ -1,0 +1,4 @@
+$ sudo yum install gcc mysql mysql-devel
+$ sudo gem install mysql -- \
+--with-mysql-include=/usr/include/mysql \
+--with-mysql-lib=/usr/lib/mysq
