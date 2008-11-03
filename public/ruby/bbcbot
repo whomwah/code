@@ -119,12 +119,13 @@ class BBC
       res.compact.join("\n")
     end
 
-    def parse_upcoming(str, categories, network, in_full)
+    def parse_upcoming(str, categories, network, in_full, url)
       json = JSON.parse(str)
       bcasts = json["broadcasts"]
       res = []
       n = " on #{network.gsub('/','')}" unless network.nil?
       res << "Here's some upcoming #{categories}#{n} :-"
+      res << "webcal://#{DOMAIN}#{url}.ics"
       last_date = last_pid = nil
       for b in bcasts
         p = b["programme"]
@@ -355,21 +356,24 @@ bot.add_command(
   args1, network = message.split(/\bon\b/).map {|a| a.strip} 
   filters = args1.split(':').map { |f| f.strip }.join('/') 
   network = '/' + network unless network.nil?
-  genre_url = "#{network}/programmes/genres/#{filters}/schedules/upcoming.json"  
-  formt_url = "#{network}/programmes/formats/#{filters}/schedules/upcoming.json"  
+  genre_url = "#{network}/programmes/genres/#{filters}/schedules/upcoming"  
+  formt_url = "#{network}/programmes/formats/#{filters}/schedules/upcoming"  
+  url = nil
 
   # do a head request to see if the first exists, if not do the full request with the other
   case BBC.http_fetch_head(genre_url)
   when Net::HTTPSuccess
-    response = BBC.http_fetch(genre_url)
+    url = genre_url
+    response = BBC.http_fetch("#{url}.json")
   else
-    response = BBC.http_fetch(formt_url)
+    url = formt_url
+    response = BBC.http_fetch("#{url}.json")
   end
 
   # now filer of we have anything useful
   case response
   when Net::HTTPSuccess
-    BBC.parse_upcoming(response.body, filters, network, in_full)
+    BBC.parse_upcoming(response.body, filters, network, in_full, url)
   else
     "Hmm, strange, nothing found!"
   end
