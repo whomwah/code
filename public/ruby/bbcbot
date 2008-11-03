@@ -24,7 +24,7 @@ class BBC
   PASSWORD = CONFIG[:settings][:password] 
   MASTER   = CONFIG[:settings][:master] 
   DOMAIN   = 'www.bbc.co.uk'
-  VERSION  = '0.9.1'
+  VERSION  = '0.9.2'
 
   class <<self
     def http_fetch(url)
@@ -61,13 +61,14 @@ class BBC
       res.compact.join("\n")
     end
 
-    def parse_schedule(str, full_txt)
+    def parse_schedule(str, full_txt, url)
       json = JSON.parse(str)
       date = Time.parse(json["schedule"]["day"]["date"])
-      title = "#{json["schedule"]["service"]["title"]} Schedule, #{date.strftime("%A %d %B %Y")}\n"
+      title = "#{json["schedule"]["service"]["title"]} Schedule, #{date.strftime("%A %d %B %Y")}"
       bcasts = json["schedule"]["day"]["broadcasts"] 
       res = []
       res << title
+      res << "webcal://#{DOMAIN}#{url}.ics\n"
       for b in bcasts
         p = b["programme"]
         title = p["display_titles"]["title"]
@@ -252,21 +253,23 @@ bot.add_command(
                   "schedule radio4:fm\n" +
                   "schedule bbcone:london in full\n" +
                   "schedule radio1 in full",
-  :regex       => /^schedules?\s[a-z0-9]+(\:[a-z0-9]+)?(\sin full)?$/,
+  :regex       => /^schedules?\s[a-z0-9]+(\:[a-z0-9]+)?(\sin\sfull)?$/,
   :is_public   => true
 ) do |sender, message|
 
-  params, in_full = message.strip.split(' ', 2)
+  params, extra_params = message.strip.split(' ', 2)
   network, outlet, date = params.strip.split(":").map { |p| p.strip }
   outlet = "/#{outlet}" unless outlet.nil?
-  in_full = (in_full.nil? or in_full.size == 0) ? false : true
+  in_full = extra_params =~ /in full/ ? true : false
 
-  response = BBC.http_fetch("/#{network}/programmes/schedules#{outlet}.json")
+  url = "/#{network}/programmes/schedules#{outlet}"
+
+  response = BBC.http_fetch("#{url}.json")
 
   # handle the response
   case response
   when Net::HTTPSuccess
-    BBC.parse_schedule(response.body, in_full)
+    BBC.parse_schedule(response.body, in_full, url)
   else
     BBC.schoolboy_error(outlet)
   end
@@ -283,7 +286,7 @@ bot.add_command(
                   "the outlets commands. Example usage:\n" +
                   "services\n" +
                   "services in full",
-  :regex       => /^services(\s+)?(\sin full)?$/,
+  :regex       => /^services(\s+)?(\sin\sfull)?$/,
   :is_public   => true
 ) do |sender, message|
 
@@ -373,6 +376,6 @@ bot.add_command(
 end
 
 # Daemonize and bring your new bot to life
-Daemons.run_proc('bbcbot', { :dir_mode => :normal, :dir => '/tmp' }) do
+Daemons.run_proc('bbcbot', { :dir_mode => :normal, :dir => '/tmp', :monitor => true, :log_output => true }) do
   bot.connect
 end
