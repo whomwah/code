@@ -5,7 +5,6 @@ require 'jabber/bot'
 require 'json'
 require 'yaml'
 require 'net/http'
-require 'daemons'
 require 'time'
 
 # I tend to keep all my config stuff in one place.
@@ -24,7 +23,7 @@ class BBC
   PASSWORD = CONFIG[:settings][:password] 
   MASTER   = CONFIG[:settings][:master] 
   DOMAIN   = 'www.bbc.co.uk'
-  VERSION  = '0.9.2'
+  VERSION  = '0.9.3'
 
   class <<self
     def http_fetch(url)
@@ -44,12 +43,16 @@ class BBC
       json = JSON.parse(str)
       p = json["schedule"]["now"]["broadcast"]["programme"] 
       parse_programme(p)
+    rescue NoMethodError => e
+      raise "#{str}: #{e.inspect}"
     end
 
     def parse_next(str)
       json = JSON.parse(str)
       p = json["schedule"]["next"]["broadcasts"][0]["programme"] 
       parse_programme(p)
+    rescue NoMethodError => e
+      raise "#{str}: #{e.inspect}"
     end
 
     def parse_programme(data)
@@ -106,6 +109,7 @@ class BBC
     def parse_outlets(str, filter)
       json = JSON.parse(str)
       services = json["services"]
+      return "no outlets!" if services.empty?
       for s in services
         if filter == s["key"]
           res = [ "Outlets for #{s["title"]}\n" ]
@@ -213,6 +217,7 @@ bot.add_command(
 end
 
 # Next
+
 bot.add_command(
   :syntax      => 'next <network>[:<outlet>]',
   :preamble    => 'Displays which programme is next on',
@@ -242,26 +247,27 @@ bot.add_command(
 end
 
 # Schedule
+
 bot.add_command(
-  :syntax      => 'schedule <network>[:<outlet>][ in full]',
+  :syntax      => 'schedule <network>[:<outlet>][ in detail]',
   :preamble    => 'Displays a full day schedule',
   :description => "Displays a full day schedule for the <network>\n" +
                   "you provided. By default you get a quick view,\n" +
-                  "but by adding 'in full' at the end you will get\n" +
+                  "but by adding 'in detail' at the end you will get\n" +
                   "more detailed information about each programme.\n" +
                   "Example usage:\n" +
                   "schedule 6music\n" +
                   "schedule radio4:fm\n" +
-                  "schedule bbcone:london in full\n" +
-                  "schedule radio1 in full",
-  :regex       => /^schedules?\s[a-z0-9]+(\:[a-z0-9]+)?(\sin\sfull)?$/,
+                  "schedule bbcone:london in detail\n" +
+                  "schedule radio1 in detail",
+  :regex       => /^schedules?\s[a-z0-9]+(\:[a-z0-9]+)?(\sin\sdetail)?$/,
   :is_public   => true
 ) do |sender, message|
 
   params, extra_params = message.strip.split(' ', 2)
   network, outlet, date = params.strip.split(":").map { |p| p.strip }
   outlet = "/#{outlet}" unless outlet.nil?
-  in_full = extra_params =~ /in full/ ? true : false
+  in_full = extra_params =~ /in detail/ ? true : false
 
   url = "/#{network}/programmes/schedules#{outlet}"
 
@@ -278,7 +284,7 @@ end
 
 # Services
 bot.add_command(
-  :syntax      => 'services [in full]',
+  :syntax      => 'services [in detail]',
   :preamble    => 'Displays a full list of networks',
   :description => "Displays a full list of available networks\n" +
                   "<network> that can be used with many of the\n" +
@@ -286,8 +292,8 @@ bot.add_command(
                   "require an outlet too, which can be found via\n" +
                   "the outlets commands. Example usage:\n" +
                   "services\n" +
-                  "services in full",
-  :regex       => /^services(\s+)?(\sin\sfull)?$/,
+                  "services in detail",
+  :regex       => /^services(\s+)?(\sin\sdetail)?$/,
   :is_public   => true
 ) do |sender, message|
 
@@ -336,23 +342,23 @@ end
 # upcoming
 
 bot.add_command(
-  :syntax      => 'upcoming <string>[:<string>][ on <network>][ in full]',
+  :syntax      => 'upcoming <string>[:<string>][ on <network>][ in detail]',
   :preamble    => 'List upcoming programmes',
   :description => "List upcoming programmes belonging to the\n" +
                   "<genre> or <format> passed in. You can also\n" +
-                  "optionally filter by <network>. Add 'in full' at\n" +
+                  "optionally filter by <network>. Add 'in detail' at\n" +
                   "the end of the command gives you more information\n" +
                   "about each programmes. Example usage:\n" +
                   "upcoming films\n" +
                   "upcoming drama:crime\n" +
                   "upcoming sport on bbcone\n" +
-                  "upcoming drama:soaps on bbcone in full",
-  :regex       => /^upcoming\s[a-z]+(\:[a-z]+)?(\:[a-z]+)?(\son\s[a-z0-9]+)?(\sin full)?$/,
+                  "upcoming drama:soaps on bbcone in detail",
+  :regex       => /^upcoming\s[a-z]+(\:[a-z]+)?(\:[a-z]+)?(\son\s[a-z0-9]+)?(\sin\sdetail)?$/,
   :is_public   => true
 ) do |sender, message|
 
-  in_full = message =~ /\sin full$/ ? true : false
-  message = message.gsub(' in full', '').strip if in_full 
+  in_full = message =~ /\sin\sdetail$/ ? true : false
+  message = message.gsub(' in detail', '').strip if in_full 
   args1, network = message.split(/\bon\b/).map {|a| a.strip} 
   filters = args1.split(':').map { |f| f.strip }.join('/') 
   network = '/' + network unless network.nil?
@@ -379,7 +385,5 @@ bot.add_command(
   end
 end
 
-# Daemonize and bring your new bot to life
-Daemons.run_proc('bbcbot', { :dir_mode => :normal, :dir => '/tmp', :monitor => true, :log_output => true }) do
-  bot.connect
-end
+# lets start the bot
+bot.connect
