@@ -6,6 +6,7 @@ require 'json'
 require 'yaml'
 require 'net/http'
 require 'time'
+#require 'daemons'
 
 # I tend to keep all my config stuff in one place.
 # You don't have to and can just delete the line
@@ -385,5 +386,8 @@ bot.add_command(
   end
 end
 
-# lets start the bot
-bot.connect
+# uncomment the lines below Daemonize your new bot to life
+# and start it with ./bbcbot start
+#Daemons.run_proc('bbcbot', { :dir_mode => :normal, :dir => '/tmp', :monitor => true, :log_output => true }) do
+  bot.connect
+#end
