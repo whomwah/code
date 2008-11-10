@@ -20,9 +20,9 @@ require 'cgi'
 #
 # Step though the above:
 # 
-# 1. Twammer is run every 5 mins via cron
+# 1. Twammer is run every 15 mins via cron
 # 2. I post a message to Twitter with #bbc at the end of the message
-# 3. Twammer checks for your last twitters in last 5 mins (default)
+# 3. Twammer checks for your last twitters in last 15 mins (default)
 # 4. Twammer filters the messages with #bbc at the end
 # 5. Twammer sends those messages onto Yammer with #bbc removed
 # 
@@ -45,7 +45,7 @@ def options
     print "Allowed options:\n"
     print "    -t, --uptwitter STR    Twitter user:pass\n"
     print "    -j, --upjabber STR     Jabber user:pass setup with Yammer IM\n"
-    print "    -d, --delay MINUTES    How far to look back for tweets (default: 5mins)\n"
+    print "    -d, --delay MINUTES    How far to look back for tweets (default: 15mins)\n"
     print "    -f, --filter STR       Only send on messages with #<filter> in\n"
     print "    -h, --help             Shows this help\n"
     print "    -q, --quiet            Display, but don't actually send messages\n"
@@ -76,7 +76,7 @@ def options
           exit 0
         end
       when "--delay"
-        o[:delay] = arg || 5 
+        o[:delay] = arg || 15 
       when "--filter"
         o[:filter] = arg || nil 
       when "--help"
@@ -100,7 +100,7 @@ if __FILE__ == $0
   response = nil
   yammer_bot = "yammer@chat.yammer.com" 
   filter = "##{opts[:filter]}" if opts[:filter]
-  delay_in_seconds = opts.has_key?(:delay) ? opts[:delay].to_i * 60 : (5*60)
+  delay_in_seconds = opts.has_key?(:delay) ? opts[:delay].to_i * 60 : (15*60)
   since = CGI.escape((Time.now - delay_in_seconds ).httpdate)
 
   # make the request to twitter for messages
