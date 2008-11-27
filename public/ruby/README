@@ -2,3 +2,4 @@ capinstano1 - A dummy cap file that was used to deploy wordpress to textdrive.co
 capinstano2 - A dummy cap file that was used to deploy wordpress to slicehost.com 
 twammer     - A program that allows you to sync your twitter feed with yammer
 bbcbot      - A Jabber bot that interacts with the BBC Programmes API
+bot.rb      - A patched version of jabber-bot to allowing logging and extra features (required for bbcbot > 0.9.5 
