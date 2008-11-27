@@ -42,17 +42,7 @@ class BBC
 
 
     def parse_pid(opts)
-      doc = hpricot(opts[:response].read)
-      res = []
-
-      (doc/"#brands/li/a").each do |link|
-        res << "\n#{link.inner_html}" 
-        pid = link.attributes['href'].split('/').last
-        res << programme_link(pid)
-        res << "check \"#{pid}\""
-      end
-
-      res.flatten.join("\n")
+      ''
     end
 
     def parse_a_z(opts)
