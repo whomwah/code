@@ -42,11 +42,11 @@ class BBC
 
 
     def parse_pid(opts)
-      ''
+      'work in progress !'
     end
 
     def parse_a_z(opts)
-      doc = hpricot(opts[:response].read)
+      doc = Hpricot(opts[:response].read)
       res = [ "there are multiple results. try one of the more specific commands below:" ]
 
       (doc/"#brands/li/a").each do |link|
@@ -55,7 +55,7 @@ class BBC
         res << programme_link(pid)
         if opts[:show_in_detail]
         end
-        res << "check \"#{pid}\""
+        res << "check #{pid}"
       end
 
       res.flatten.join("\n")
