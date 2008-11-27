@@ -8,6 +8,10 @@ require 'hpricot'
 require 'open-uri'
 require 'net/http'
 
+# This version needs a patched version of jabberbot available at
+# http://code.whomwah.com/ruby/bot.rb
+# copy the bot.rb file into /path/to/gems/jabber-bot/lib/jabber/
+
 CONFIG_SETTINGS = YAML::load(File.read('/Users/duncan/_scratch/config.yaml'))
 LAST_UPDATED    = File.new(File.expand_path(__FILE__)).mtime
 
