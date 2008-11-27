@@ -40,9 +40,24 @@ class BBC
       end
     end
 
+
+    def parse_pid(opts)
+      doc = hpricot(opts[:response].read)
+      res = []
+
+      (doc/"#brands/li/a").each do |link|
+        res << "\n#{link.inner_html}" 
+        pid = link.attributes['href'].split('/').last
+        res << programme_link(pid)
+        res << "check \"#{pid}\""
+      end
+
+      res.flatten.join("\n")
+    end
+
     def parse_a_z(opts)
-      doc = Hpricot(opts[:response].read)
-      res = [ "There are multiple results. Try one of the more specific commands below:" ]
+      doc = hpricot(opts[:response].read)
+      res = [ "there are multiple results. try one of the more specific commands below:" ]
 
       (doc/"#brands/li/a").each do |link|
         res << "\n#{link.inner_html}" 
@@ -484,20 +499,20 @@ end
 bot.add_command(
   :syntax      => 'check <pid>',
   :preamble    => 'Displays information about a programme',
-  :description => "Displays information about a programme\n" +
-                  "check radio1",
+  :description => "Displays information about a single programme",
   :regex       => /^check\s[a-z0-9]+$/,
   :is_public   => true
 ) do |sender, message, log|
   log.info("PID: #{message} | #{sender}")
+  pid = message
 
-  if response = BBC.http_fetch("programmes/services.json")
-    BBC.parse_outlets({
+  if response = BBC.http_fetch("programmes/#{pid}")
+    BBC.parse_pid({
       :response => response,
-      :message => message
+      :pid => pid
     })
   else
-    log.warn("OUTLETS: Nothing found!")
+    log.warn("PID: Nothing found!")
     "Hmm, strange, nothing found!"
   end
 end
