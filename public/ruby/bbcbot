@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'jabber/bot'
+require 'bot'
 require 'json'
 require 'yaml'
 require 'hpricot'
@@ -12,9 +12,8 @@ require 'net/http'
 # http://code.whomwah.com/ruby/bot.rb
 # copy the bot.rb file into /path/to/gems/jabber-bot/lib/jabber/
 
-CONFIG_SETTINGS = YAML::load(File.read('/Users/duncan/_scratch/config.yaml'))
+CONFIG_SETTINGS = YAML::load(File.read('/home/duncan/configs/bbcbot.yaml'))
 LAST_UPDATED    = File.new(File.expand_path(__FILE__)).mtime
-
 
 class BBC
 
@@ -206,6 +205,11 @@ class BBC
     end
   end
 end
+
+if __FILE__ == $0
+
+# Enable auto-flush on STDOUT
+STDOUT.sync = true
 
 # Create our new bot
 bot = Jabber::Bot.new(
@@ -513,3 +517,5 @@ end
 
 # start the bot
 bot.connect
+
+end
