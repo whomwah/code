@@ -68,7 +68,7 @@ class BBC
       json = JSON.parse(opts[:response].read)
       parse_programme( json["schedule"]["now"]["broadcast"]["programme"] ) 
     rescue NoMethodError => e
-      opts[:log].error("now: str = #{opts[:response].read}") if opt.has_key? :log
+      opts[:log].error("now: str = #{opts[:response].read}") if opts.has_key? :log
       raise e
     end
 
