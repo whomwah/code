@@ -18,12 +18,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1000, 312}}</string>
-			<string>{{0, 322}, {1000, 352}}</string>
+			<string>{{0, 0}, {1000, 90}}</string>
+			<string>{{0, 100}, {1000, 574}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Account</key>
@@ -103,54 +103,17 @@
 		<array>
 			<integer>0</integer>
 			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
 		</array>
 		<array>
 			<integer>0</integer>
 			<integer>0</integer>
 			<integer>1</integer>
-			<integer>4</integer>
-			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-			<integer>1</integer>
-			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-			<integer>1</integer>
-			<integer>1</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-			<integer>1</integer>
-			<integer>1</integer>
-			<integer>0</integer>
-			<integer>0</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>1</integer>
 			<integer>4</integer>
-			<integer>1</integer>
-			<integer>1</integer>
-			<integer>0</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>

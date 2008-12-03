@@ -521,15 +521,6 @@ var scheduleController = {
 
         }
 
-        var handler = function() {
-            var broadcast = m;
-            
-            // move onto the next window
-            var browser = d.getElementById('browser').object;
-            browser.goForward(d.getElementById('episodeLevel'), 'Episode');
-
-        };
-        rowElement.onclick = handler;
     }
     
 };
