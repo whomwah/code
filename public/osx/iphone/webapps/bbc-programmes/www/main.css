@@ -210,10 +210,8 @@ body {
 }
 
 .listRowTemplate3_template {
-    position: relative;
     list-style-type: none;
     overflow: hidden;
-    margin-bottom: 0px;
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 10px;
@@ -227,10 +225,11 @@ body {
     font-size: 14px;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
-    margin-left: 0px;
     margin-top: 0px;
-    margin-right: 0px;
+    margin-left: 0px;
+    position: relative;
     width: auto;
+    margin-right: 0px;
     min-height: 96px;
     height: auto;
 }

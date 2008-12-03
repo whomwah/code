@@ -18,8 +18,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1000, 273}}</string>
-			<string>{{0, 283}, {1000, 391}}</string>
+			<string>{{0, 0}, {1000, 312}}</string>
+			<string>{{0, 322}, {1000, 352}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -113,7 +113,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>choiceLevel</string>
+		<string>scheduleLevel</string>
 	</array>
 </dict>
 </plist>

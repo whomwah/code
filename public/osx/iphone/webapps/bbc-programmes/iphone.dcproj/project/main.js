@@ -273,8 +273,6 @@ var choiceController = {
         url += (fd.outlet == undefined) ? '' : '/' + fd.outlet.url_key;
         url += '.xml';
         
-        alert(url);
-        
         // go get the data
         self.fetchSchedule(url, progress, 
             function(xmlRequest) {
@@ -314,8 +312,6 @@ var choiceController = {
         url += (fd.outlet == undefined) ? '' : '/' + fd.outlet.url_key;
         url += date ? '/' + date.yyyymmdd() : '';
         url += '.xml';
-        
-        alert(url);
         
         // go get the data
         self.fetchSchedule(url, progress, 
