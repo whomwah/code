@@ -1,4 +1,4 @@
-var domain = 'http://code.whomwah.com/bbcprogrammes';
+var domain = 'http://www.bbc.co.uk';
 var d = document;
 
 // Handles displaying the top level content menu and building the handlers

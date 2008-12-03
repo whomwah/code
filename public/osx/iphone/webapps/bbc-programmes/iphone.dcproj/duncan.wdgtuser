@@ -23,7 +23,7 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Account</key>
@@ -100,11 +100,57 @@
 			<integer>0</integer>
 			<integer>1</integer>
 		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+			<integer>1</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+			<integer>1</integer>
+			<integer>1</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+			<integer>1</integer>
+			<integer>1</integer>
+			<integer>0</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+			<integer>1</integer>
+			<integer>1</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>1</integer>
 			<integer>4</integer>
+			<integer>1</integer>
+			<integer>1</integer>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
