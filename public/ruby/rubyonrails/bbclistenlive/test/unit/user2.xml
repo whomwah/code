@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fql_query_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" list="true">
+  <user>
+    <first_name>Misbah</first_name>
+    <last_name>Arif</last_name>
+    <sex>female</sex>
+    <pic_small>http://profile.ak.facebook.com/v52/1179/30/t36916092_1379.jpg</pic_small>
+    <pic_big>http://profile.ak.facebook.com/v52/1179/30/n36916092_1379.jpg</pic_big>
+    <pic_square>http://profile.ak.facebook.com/v52/1179/30/q36916092_1379.jpg</pic_square>
+    <current_location>
+      <city>London</city>
+      <state/>
+      <country>England</country>
+      <zip/>
+    </current_location>
+    <timezone/>
+    <birthday>June 16</birthday>
+  </user>
+</fql_query_response>

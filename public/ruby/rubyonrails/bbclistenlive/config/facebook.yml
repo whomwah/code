@@ -1,0 +1,32 @@
+development:
+  key: "key"
+  secret: "secret"
+  canvas_path: /bbclistenlive/
+  callback_path: /bbclistenlive/
+  tunnel:
+    username: yourLoginName
+    host: www.yourexternaldomain.com
+    port: 1234
+    local_port: 5678
+
+test:
+  key: "key"
+  secret: "secret"
+  canvas_path: /bbclistenlive/
+  callback_path: /bbclistenlive/
+  tunnel:
+    username: yourLoginName
+    host: www.yourexternaldomain.com
+    port: 1234
+    local_port: 5678
+
+production:
+  key: "key"
+  secret: "secret"
+  canvas_path: /bbclistenlive/
+  callback_path: /bbclistenlive/
+  tunnel:
+    username: yourLoginName
+    host: www.yourexternaldomain.com
+    port: 1234
+    local_port: 5678

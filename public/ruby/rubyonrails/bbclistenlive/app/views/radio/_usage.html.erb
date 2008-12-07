@@ -1,0 +1,11 @@
+<div class="container hangright clearfix" id="top_usage">
+  <h2>Recent Listening <%= plays_today if params[:action] == 'everyones' %></h2>
+  <ol>
+  <% for preference in list -%>
+		<% if preference.user.is_page %>
+		<% else %>
+    <li><%= render(:partial => "shared/user", :locals => { :preference => preference }) %></li>
+		<% end -%>
+  <% end -%>
+  </ol>
+</div>

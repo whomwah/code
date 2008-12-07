@@ -1,0 +1,16 @@
+<fieldset class="national">
+  <legend>National Stations</legend>
+  <p>You will see up-to-date show information on your profile when choosing any of these. You can also see now/next variations of this data via the tabs above.</p>
+  <ul class="option_list clearfix">
+    <% networks.each do |n| -%>
+      <% if n.is_national -%>
+      <li>
+        <div class="meta">
+          <h3 class="title"><label><%= fetch_logo(n) %><%= check_box_tag("networks[#{n.id}]", value="1", checked = user.networks.include?(n)) %> <%= n.name %></label></h3>
+          <p class="tagline"><%= n.tagline %></p>
+        </div>
+      </li>
+      <% end -%>
+    <% end -%>
+  </ul>
+</fieldset>

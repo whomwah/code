@@ -1,0 +1,19 @@
+<% content_for(:header) do %>
+<%= render(:partial => "css/prefs") %>
+<%= render(:partial => "success") if params[:action] == 'success' %>
+<%= render(:partial => "first_time_user") if @user.first_time? %>
+<% end %>
+
+<% fb = "?fb_page_id=#{params[:fb_page_id]}" if params[:fb_page_id] %>
+<% form_for :network, @user.networks, :url => "#{FACEBOOK["canvas_path"]}prefs/update#{fb}" do |f| -%>
+<p class="intro">Hi <fb:name uid="loggedinuser" firstnameonly="true" linked="false" useyou="false" capitalize="true" />, you can set your preferences here. You need to choose the networks you would like to appear on your profile page. Choose from below by ticking the box next to the network.</p>
+
+<%= render(:partial => "format", :locals => { :user => @user }) %>
+<%= render(:partial => "national", :locals => {:networks => @networks, :user => @user}) %>
+<%= render(:partial => "local", :locals => {:networks => @networks, :user => @user}) %>
+
+<div class="form_button">
+  <input type="submit" name="submit" value="update" />
+  <input type="reset" name="reset" value="cancel" />
+</div>
+<% end %>

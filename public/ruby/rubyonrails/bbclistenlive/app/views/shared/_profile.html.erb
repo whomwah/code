@@ -1,0 +1,81 @@
+<fb:fbml version="1.1">
+<style>
+.main h5 {
+  font-size: 10px;
+  padding: 0;
+  margin: 0 0 2px 0;
+}
+.main p {
+  font-size: 9px;
+  line-height:12px;
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+.main .play_swf {
+  float: left;
+}
+.main .play_swf img {
+  position:relative;
+<fb:wide>
+  top:5px;
+</fb:wide>
+}
+.main ol {
+  padding: 0;
+  margin: 0;
+}
+.main ol li {
+  display: block;
+  list-style: none;
+  margin-bottom: 6px;
+}
+.main ol li img.logo {
+  float: right;
+}
+.main .meta {
+  margin-left:38px;
+  width:240px;
+}
+.main .meta span {
+  font-size:9px;
+  color:#333;
+}
+</style>
+
+<fb:profile-action url="#{File.join(BBC, 'radio')}">View BBC Radio</fb:profile-action>
+
+<% unless @user.is_page %>
+<fb:subtitle seeallurl="http://apps.facebook.com/bbclistenlive/prefs">
+  <fb:action href="">Mine</fb:action>
+  <a href="http://apps.facebook.com/bbclistenlive/radio/mine" title="View my radio">Mine</a> | 
+  <a href="http://apps.facebook.com/bbclistenlive/radio/friends" title="View my friends' radio">Friends</a> | 
+  <a href="http://apps.facebook.com/bbclistenlive/radio/everyones" title="View everyone's radio">Everyone</a>
+</fb:subtitle>
+<% end %>
+
+<div class="main">
+  <ol>
+  <% for n in @user.networks -%>
+  <li class="clearfix">
+    <fb:narrow>
+    <%= render(:partial => "shared/logo", :locals => { :n => n, :size => "50x23" }) %>
+    </fb:narrow>
+    <fb:wide>
+    <%= render(:partial => "shared/logo", :locals => { :n => n }) %>
+    </fb:wide>
+    <div class="play_swf">
+		<% unless @user.is_page %>
+      <fb:visible-to-owner>
+		<% end %>
+      <%= display_pop_up_link(@user, n) %>
+		<% unless @user.is_page %>
+      </fb:visible-to-owner>
+		<% end %>
+    </div>
+    <fb:ref handle="<%=n.channelid%>" />
+  </li>
+  <% end -%>
+  </ol>
+</div>
+</fb:fbml>

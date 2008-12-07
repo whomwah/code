@@ -1,0 +1,9 @@
+<%= render(:partial => "shared/header") %>
+<%= yield :header %>
+
+<div class="main">
+<%= render(:partial => "shared/tabs") unless params[:fb_page_id] %>
+<%= yield %>
+</div>
+
+<%= render(:partial => "shared/google") %>

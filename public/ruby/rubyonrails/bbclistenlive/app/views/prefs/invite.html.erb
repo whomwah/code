@@ -1,0 +1,7 @@
+<% content_for(:header) do %>
+<%= render(:partial => "css/prefs") %>
+<% end %>
+
+<fb:request-form type="BBC Radio Player app" action="<%=FBOOK_APP_URL%>/radio/mine" content="<%= h(@invite_code) %>" invite="true">
+  <fb:multi-friend-selector max="20" actiontext="Invite friends who don't have this app?" showborder="true" rows="5" exclude_ids="<%= @friends_list %>">
+</fb:request-form>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fql_query_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" list="true">
+  <user>
+    <first_name>Paul</first_name>
+    <last_name>Clifford</last_name>
+    <sex/>
+    <pic_small/>
+    <pic_big/>
+    <pic_square/>
+    <current_location>
+      <city/>
+      <state/>
+      <country/>
+      <zip/>
+    </current_location>
+    <timezone>1</timezone>
+    <birthday>January 17, 1979</birthday>
+  </user>
+</fql_query_response>

@@ -1,0 +1,24 @@
+<fieldset class="listening_formats">
+  <legend>Listening Format</legend>
+  <p>You can choose what format you would like to listen to the radio in. By default you will open the BBC Radio console, but you have options to choose just the radio streams. These will open in your stand alone player. If the stream is not available in your chosen format then the Radio player console will be opened instead.</p>
+  <ul class="national clearfix">
+    <li>
+      <div class="meta">
+        <h3 class="title"><label><%= radio_button("user", "stream_type", "bbc") %> BBC Radio player <span>(default)</span></label></h3>
+        <p class="tagline">Open the BBC Radio player console. From here you have access to all the other networks, plus all the audio on demand shows.</p>
+      </div>
+    </li>
+    <li>
+      <div class="meta">
+        <h3 class="title"><label><%= radio_button("user", "stream_type", "asx") %> Windows Media</label></h3>
+        <p class="tagline">Plays using your Windows media player.</p>
+      </div>
+    </li>
+    <li>
+      <div class="meta">
+        <h3 class="title"><label><%= radio_button("user", "stream_type", "ram") %> Real Media</label></h3>
+        <p class="tagline">Plays using your Real Media player.</p>
+      </div>
+    </li>
+  </ul>
+</fieldset>

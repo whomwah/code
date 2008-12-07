@@ -1,0 +1,16 @@
+<fieldset class="local">	
+  <legend>My Local BBC</legend>
+  <p class="sub">We currently can't give you access to current show information for these networks. If a way becomes available, I will try to implement it.</p>
+  <ul class="option_list clearfix">
+  <% networks.each do |n| -%>
+    <% unless n.is_national -%>
+    <li>
+      <div class="meta">
+        <h3 class="title"><label><%= check_box_tag("networks[#{n.id}]", value="1", checked = user.networks.include?(n)) %> <%= n.name %></label></h3>
+        <p class="tagline"><%= n.tagline %></p>
+      </div>
+    </li>
+    <% end -%>
+  <% end -%>
+  </ul>
+</fieldset>

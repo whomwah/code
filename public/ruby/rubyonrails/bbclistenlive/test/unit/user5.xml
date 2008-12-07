@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fql_query_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" list="true">
+  <user>
+    <first_name>Kirsty</first_name>
+    <last_name>Goodson</last_name>
+    <sex xsi:nil="true"/>
+    <pic_small>http://profile.ak.facebook.com/profile5/1468/28/t636001809_2124.jpg</pic_small>
+    <pic_big>http://profile.ak.facebook.com/profile5/1468/28/n636001809_2124.jpg</pic_big>
+    <pic_square>http://profile.ak.facebook.com/profile5/1468/28/q636001809_2124.jpg</pic_square>
+    <current_location xsi:nil="true"/>
+    <timezone>1</timezone>
+    <birthday xsi:nil="true"/>
+  </user>
+</fql_query_response>

@@ -1,0 +1,39 @@
+<% content_for(:header) do %>
+  <%= render(:partial => "css/help") %>
+<% end %>
+
+<h2>Firefox</h2>
+<p>Having problems with the clicking the play button on your profile page and nothing happening? The likely cause is the browsers built in pop-up blocker. This page will show you how to update the pop-up blocker settings for various versions of <strong>Firefox</strong> (Windows and Mac).</p>
+
+<ul>
+<li><a href="#mac">Firefox (Mac) instructions</a></li>
+<li><a href="#windows">Firefox (Windows) instructions</a></li>
+</ul>
+
+<h3 id="mac">Firefox (Mac)</h3>
+<h4>Step 1. Open the 'Preferences' dialog window</h4>
+<%= image_tag("ff_mac/step1.png") %>
+<p>From the menu bar select FireFox > Preferences</p>
+<h4>Step 2. Click the correct 'Content' tab</h4>
+<%= image_tag("ff_mac/step2.png") %>
+<p>Click the tab marked 'Content' to get to the next menu.</p>
+<h4>Step 2. Add url to exception list</h4>
+<%= image_tag("ff_mac/step3.png") %>
+<p>Add bbc-facebook.dyndns.org to the 'address of web site' box and press ADD</p>
+<h4>Step 3. Check results and close window</h4>
+<%= image_tag("ff_mac/step4.png") %>
+<p>Things should look a bit like the image above (unless you have other exceptions in there). If is looks ok close the window. You should now be able to press the play button and the radio will pop into action.</p>
+
+<h3 id="windows">Firefox (Windows)</h3>
+<h4>Step 1. Open the 'Options' dialog window</h4>
+<%= image_tag("ff_ms/step1.png") %>
+<p>From the menu bar select Tools > Options</p>
+<h4>Step 2. Open the correct 'Exception' dialog box</h4>
+<%= image_tag("ff_ms/step2.png") %>
+<p>Click the 'Exceptions' box next to the Block popup windows tick box (make sure Block pop-up windows in ticked).</p>
+<h4>Step 2. Add url to exception list</h4>
+<%= image_tag("ff_ms/step3.png") %>
+<p>Add bbc-facebook.dyndns.org to the 'address of web site' box and press ADD</p>
+<h4>Step 3. Check results and close window</h4>
+<%= image_tag("ff_ms/step4.png") %>
+<p>Things should look a bit like the image above (unless you have other exceptions in there). If is looks ok close the window. You should now be able to press the play button and the radio will pop into action.</p>

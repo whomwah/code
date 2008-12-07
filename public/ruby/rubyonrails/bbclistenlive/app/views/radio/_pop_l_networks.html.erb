@@ -1,0 +1,8 @@
+<div class="container hangright clearfix" id="pop_local">
+  <h2>Popular Local Networks</h2>
+  <ol>
+  <% for preference in list -%>
+  <li><span class="heading <%="bigger" if list.first == preference%>"><%= link_to_bbc_radio_site(preference.network) %></span> <span class="subheading"><%= pluralize(preference.t_plays, 'play') %></span></li>
+  <% end -%>
+  </ol>
+</div>

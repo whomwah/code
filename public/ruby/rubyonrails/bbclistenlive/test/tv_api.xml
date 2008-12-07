@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='ISO-8859-9'?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="http://www0.rdthdo.bbc.co.uk/services/api/xsl/bbc.schedule.getProgrammes.xsl"?>
+<!-- This data is strictly for non-commercial use only.  See http://backstage.bbc.co.uk/archives/2005/01/terms_of_use.html for details of the terms and conditions. -->
+<rsp stat="ok">
+	<schedule>
+		<programme programme_id="crid://bbc.co.uk/939571591" title="Zane Lowe">
+			<synopsis>New and cutting edge music. Join the debate in the chat room, hear the hottest record in the world today and help choose another Fresh Meat winner. Plus live music from Editors.</synopsis>
+			<channel_id>BBCROne</channel_id>
+			<start>2007-06-20T18:00:00Z</start>
+
+			<duration>02:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/939571544" title="Jo Whiley&apos;s In Live Music We Trust">
+			<synopsis>100 per cent live music, with the best new Live Lounge, session and concert performances, plus a special documentary looking at The Twang.</synopsis>
+			<channel_id>BBCROne</channel_id>
+			<start>2007-06-20T20:00:00Z</start>
+			<duration>01:00:00</duration>
+
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/943767977" title="Mark Radcliffe and Stuart Maconie">
+			<synopsis>Mark and Stuart present the best music, including a live session from Editors.</synopsis>
+			<channel_id>BBCRTwo</channel_id>
+			<start>2007-06-20T19:00:00Z</start>
+			<duration>02:00:00</duration>
+		</programme>
+
+		<programme programme_id="crid://bbc.co.uk/943767919" title="The Charles Hazlewood Show">
+			<synopsis>6/8. Charles Hazlewood continues his series featuring eclectic musical exploration. He&apos;s joined in the studio by the counter-tenor Iestyn Davies.</synopsis>
+			<channel_id>BBCRTwo</channel_id>
+			<start>2007-06-20T21:00:00Z</start>
+			<duration>01:00:00</duration>
+		</programme>
+
+		<programme programme_id="crid://bbc.co.uk/947963262" title="Performance on 3">
+			<synopsis>The BBC Singers perform at the Finnish Tampere Festival in a programme of works by Vaughan-Williams, Britten, Tippet, Maxwell Davies, Giles Swayne, Edward Cowie and Judith Bingham.</synopsis>
+			<channel_id>BBCRThree</channel_id>
+			<start>2007-06-20T18:00:00Z</start>
+			<duration>01:45:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/947963326" title="Composer of the Week">
+
+			<synopsis>Bela Bartok (1881-1945): 3/5. Donald Macleod looks at Bartok&apos;s middle years as he struggled to find his own voice. Including String Quartet No 3 and Piano Concerto No 2.</synopsis>
+			<channel_id>BBCRThree</channel_id>
+			<start>2007-06-20T19:45:00Z</start>
+			<duration>01:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/952153470" title="The Moral Maze">
+
+			<synopsis>Michael Buerk chairs a debate on the moral questions behind the week&apos;s news. Clifford Longley, Michael Portillo, Ian Hargreaves and Steven Rose cross-examine witnesses.</synopsis>
+			<channel_id>BBCRFour</channel_id>
+			<start>2007-06-20T19:00:00Z</start>
+			<duration>00:45:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/952153469" title="Lying Abroad">
+
+			<synopsis>How to Be an Ambassador: Christopher Meyer, former British Ambassador in Washington, offers an insider&apos;s guide to the skills required in representing one&apos;s country overseas (4/4).</synopsis>
+			<channel_id>BBCRFour</channel_id>
+			<start>2007-06-20T19:45:00Z</start>
+			<duration>00:15:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1174451325" title="Five Live Sport">
+
+			<synopsis>Eleanor Oldroyd hosts an evening of sport debate, with a look back at Ascot with Cornelius Lysaght, tennis news in the week before Wimbledon, and the NFL&apos;s Dan Marino joins us.</synopsis>
+			<channel_id>BBCRFiveL</channel_id>
+			<start>2007-06-20T18:00:00Z</start>
+			<duration>03:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1174451324" title="Anita Anand">
+
+			<synopsis>An offbeat take on news, sport and politics. Including the latest money news at 10.45pm and 11.45pm. Text 85058 [network rates] or go to bbc.co.uk/fivelive for more information.</synopsis>
+			<channel_id>BBCRFiveL</channel_id>
+			<start>2007-06-20T21:00:00Z</start>
+			<duration>03:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1178638315" title="On Sports Extra This Month...">
+			<synopsis>Sports Extra Cricket: Coming up on Friday at 5.15pm, uninterrupted commentary on one of the day&apos;s top matches, as the Twenty20 Cup gets underway.</synopsis>
+
+			<channel_id>BBCRFiveX</channel_id>
+			<start>2007-06-20T17:45:00Z</start>
+			<duration>05:15:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1178638322" title="On Sports Extra This Month...">
+			<synopsis>Sports Extra Cricket: Coming up tomorrow at 5.15pm, uninterrupted commentary on one of the day&apos;s top matches, as the Twenty20 Cup gets underway.</synopsis>
+
+			<channel_id>BBCRFiveX</channel_id>
+			<start>2007-06-20T23:00:00Z</start>
+			<duration>06:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1182837951" title="Marc Riley&apos;s Brain Surgery">
+			<synopsis>Featuring the Earlies, purveyors of experimental psychedelic pop.</synopsis>
+			<channel_id>BBCSixMU</channel_id>
+
+			<start>2007-06-20T18:00:00Z</start>
+			<duration>02:30:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1182837950" title="6 Music Plays it Again">
+			<synopsis>Mica Paris continues to celebrate the music of the Maestro from Minneapolis.</synopsis>
+			<channel_id>BBCSixMU</channel_id>
+			<start>2007-06-20T20:30:00Z</start>
+
+			<duration>00:30:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1187037528" title="Bolt">
+			<synopsis>The Killing Game: An accident befalls Prince Litsi when he meets Danielle. Dick Francis&apos; thriller stars Sian Phillips. Episode 4 of 5. [Rpt of today 9.00am].</synopsis>
+			<channel_id>BBCSeven</channel_id>
+			<start>2007-06-20T19:00:00Z</start>
+
+			<duration>00:30:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1187037529" title="Doctor Syn">
+			<synopsis>Dr Syn pursues his enemy to America and falls in with pirates, among whom he encounters an unexpected friend. Episode 3 of 10. [Rpt of today 9.30am].</synopsis>
+			<channel_id>BBCSeven</channel_id>
+			<start>2007-06-20T19:30:00Z</start>
+			<duration>00:30:00</duration>
+
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1191227131" title="UKG: The Blueprint with Richie Vee">
+			<synopsis>The best UKG and the definitive top 10. Martin Control-S, Scott Maurice and MC Majestic are the guests. Txt 88111 [max cost 12p]. Up at 10.00pm - The Next Chapter with DJ Flight.</synopsis>
+			<channel_id>OneXtra</channel_id>
+			<start>2007-06-20T18:00:00Z</start>
+			<duration>03:00:00</duration>
+		</programme>
+
+		<programme programme_id="crid://bbc.co.uk/1191227130" title="D&amp;B: Next Chapter with DJ Flight">
+			<synopsis>Future drum &amp; bass flavours, plus the latest styles and sounds from the heaviest in breaking new talent. Txt 88111 [max cost 12p]. Next at midnight - African: DNA with DJ Edu.</synopsis>
+			<channel_id>OneXtra</channel_id>
+			<start>2007-06-20T21:00:00Z</start>
+			<duration>02:00:00</duration>
+		</programme>
+
+		<programme programme_id="crid://bbc.co.uk/1195422541" title="Gujarati Programme">
+			<synopsis>National: Music and entertainment in Gujarati. Presented by Dev Parmar. East Midlands: Music and entertainment in Punjabi, with Gurpreet.</synopsis>
+			<channel_id>BBCAsian</channel_id>
+			<start>2007-06-20T19:00:00Z</start>
+			<duration>02:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1195422540" title="The Hype Show">
+
+			<synopsis>Cutting-edge Brit-Asian music, breaking new artists and tracks, with DJ Kayper.</synopsis>
+			<channel_id>BBCAsian</channel_id>
+			<start>2007-06-20T21:00:00Z</start>
+			<duration>03:00:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1736490147" title="A Year with the Nuclear Police">
+			<synopsis>1/2. A look at a year in the life of the International Atomic Energy Agency, presented by Rob Broomby.</synopsis>
+
+			<channel_id>BBCWrld</channel_id>
+			<start>2007-06-20T19:06:00Z</start>
+			<duration>00:24:00</duration>
+		</programme>
+		<programme programme_id="crid://bbc.co.uk/1736489846" title="Discovery">
+			<synopsis>Indispensables: 3/4. Erika Wright investigates revolutionary inventions now taken for granted across the world. This episode looks at the battery.</synopsis>
+			<channel_id>BBCWrld</channel_id>
+
+			<start>2007-06-20T19:30:00Z</start>
+			<duration>00:30:00</duration>
+		</programme>
+	</schedule>
+</rsp>

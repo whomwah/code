@@ -1,0 +1,11 @@
+<% content_for(:header) do %>
+<%= render(:partial => "css/radio") %>
+<% end %>
+
+<p class="intro"><%= display_welcome(params) %></p>
+<%= render(:partial => "listening", :locals => { :list => @user_rankings }) %>
+<%= render(:partial => "usage", :locals => { :list => @recent_listening }) %>
+<%= render(:partial => "fav_n_networks", :locals => { :list => @fav_national }) %>
+<%= render(:partial => "fav_l_networks", :locals => { :list => @fav_local }) %>
+<%= render(:partial => "pop_n_networks", :locals => { :list => @pop_national }) %>
+<%= render(:partial => "pop_l_networks", :locals => { :list => @pop_local }) %>

@@ -1,0 +1,26 @@
+duncanrobertson:
+  id: 1
+  fbid: 522101041
+  stream_type: "bbc"
+  total_plays: 45
+nickwilliams:
+  id: 2
+  fbid: 758625496
+  stream_type: "ram"
+  total_plays: 193
+ramlaali:
+  id: 3
+  fbid: 785715547
+  stream_type: "asx"
+  total_plays: 3
+user_with_no_preferences:
+  id: 4
+  fbid: 444
+  stream_type:
+  total_plays: 0
+page_with_two_preferences:
+  id: 5
+  fbid: 7203487574
+  stream_type: "bbc"
+  total_plays: 20
+  is_page: 1

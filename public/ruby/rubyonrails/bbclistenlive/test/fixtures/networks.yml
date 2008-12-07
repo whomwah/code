@@ -1,0 +1,227 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+BBCROne:
+  id: 1
+  name: "BBC Radio 1"
+  base_name: "radio1"
+  url: "radio1" 
+  tagline: "The best new music and entertainment"
+  current_show: "Zane Lowe, Steve Lamacq, Huw Stephens and Colin Murray team up for a five hour feast of live music highlights from Glastonbury 2007."
+  current_title: "Radio 1 presents Glastonbury"
+  current_start: "2007-06-25 18:00:00"
+  current_duration: 18000
+  next_show: "With Daniel P Carter. The best in rock and metal on the biggest rock show in the world. Slash and Duff from Velvet Revolver take over."
+  next_title: "The Radio 1 Rock Show"
+  next_start: "2007-06-25 23:00:00"
+  next_duration: 7200
+  channelid: "BBCROne"
+  bbc: "http://www.bbc.co.uk/radio/aod/radio1"
+  ram: "http://www.bbc.co.uk/real/file"
+  asx: "http://www.bbc.co.uk/windows/file"
+  position: 2
+  active: 1
+BBCRTwo:
+  id: 2
+  name: "BBC Radio 2"
+  base_name: "radio2"
+  url: "radio2"
+  tagline: "BBC Radio 2 the most listened-to station in the UK" 
+  current_show: "Mark and Stuart present the best music, including live sessions."
+  current_title: "Mark Radcliffe and Stuart Maconie"
+  current_start: "2007-06-25 19:00:00"
+  current_duration: 7200
+  next_show: "Clare Teal presents the second part of the BBC Big Band and conductor Jiggs Whigham in concert at The Hawth in Crawley. They are joined by guest singer Tony Hadley."
+  next_title: "Big Band Special"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 1800
+  channelid: "BBCRTwo"
+  bbc: "http://www.bbc.co.uk/radio/aod/radio2"
+  ram:
+  asx: "http://www.bbc.co.uk/windows/file"
+  position: 1
+  active: 1
+BBCRThree:
+  id: 3
+  name: "BBC Radio 3"
+  base_name: "radio3"
+  url: "radio3"
+  tagline: "Classical jazz and world music drama and arts"
+  current_show: "Kenan Malik talks to architect and academic Robert Tavernor, whose new book attempts to show the important part measurement has always played in human experience."
+  current_title: "Night Waves"
+  current_start: "2007-06-25 20:45:00"
+  current_duration: 2700
+  next_show: "With Martin Handley. A sequence of music with a featured performer leading the way. Flautist Emmanuel Pahud plays Bach&apos;s Brandenburg Concerto No 5 with the Berlin Baroque Soloists."
+  next_title: "Artist Focus"
+  next_start: "2007-06-25 21:30:00"
+  next_duration: 1800
+  channelid: "BBCRThree"
+  bbc: "http://www.bbc.co.uk/radio/aod/radio3"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+BBCRFour:
+  id: 4
+  name: "BBC Radio 4"
+  base_name: "radio4" 
+  url: "radio4" 
+  tagline: "The home of intelligent speech radio"
+  current_show: "Andrew Marr and guests set the cultural agenda for the week."
+  current_title: "Start the Week"
+  current_start: "2007-06-25 20:30:00"
+  current_duration: 1680
+  next_show: "The latest weather forecast."
+  next_title: "Weather"
+  next_start: "2007-06-25 20:58:00"
+  next_duration: 120
+  channelid: "BBCRFour"
+  bbc: "http://www.bbc.co.uk/radio/aod/radio4"
+  ram: "http://www.bbc.co.uk/real/file"
+  asx: "http://www.bbc.co.uk/windows/file"
+  position: 10
+  active: 1
+BBCRFiveL:
+  id: 5
+  name: "BBC Radio Five Live"
+  base_name: "fivelive" 
+  url: "fivelive" 
+  tagline: "The home of live news and live sport"
+  current_show: "Eleanor Oldroyd rounds up the day&apos;s stories away from Wimbledon. Studio guests have their say on the big talking points."
+  current_title: "Five Live Sport"
+  current_start: "2007-06-25 19:00:00"
+  current_duration: 7200
+  next_show: "An offbeat take on news, sport and politics. Including the latest money news at 10.45pm and 11.45pm. Text 85058 [network rates] or go to bbc.co.uk/fivelive for more information."
+  next_title: "Anita Anand"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 10800
+  channelid: "BBCRFiveL"
+  bbc: "http://www.bbc.co.uk/radio/aod/fivelive"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+BBCRFiveX:
+  id: 6
+  name: "BBC Five Live Sports Extra"
+  base_name: "fivesportsextra" 
+  url: "fivesportsextra" 
+  tagline: "Sport commentary on Five Live's digital sister station"
+  current_show: "Sports Extra Tennis: Coming up tomorrow at 1.00pm, extra court coverage from Wimbledon."
+  current_title: "On Sports Extra This Month..."
+  current_start: "2007-06-25 19:00:00"
+  current_duration: 14400
+  next_show: "Sports Extra Tennis: Coming up at 1.00pm, extra court coverage from Wimbledon."
+  next_title: "On Sports Extra This Month..."
+  next_start: "2007-06-25 23:00:00"
+  next_duration: 21600
+  channelid: "BBCRFiveX"
+  bbc: "http://www.bbc.co.uk/radio/aod/fivesportsextra"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+BBCSixMU:
+  id: 7 
+  name: "BBC 6 Music"
+  base_name: "6music" 
+  url: "6music"
+  tagline: "Closer to the music that matters"
+  current_show: "7 Ages of Rock. The Birth of Rock, with Keith Richards (the Rolling Stones), Roger Daltrey (The Who) and Ginger Baker (Cream)."
+  current_title: "6 Music Plays it Again"
+  current_start: "2007-06-25 20:30:00"
+  current_duration: 1800
+  next_show: "Eddie sits in for George Lamb, throwing the usual features out of the window to replay the best of the UK&apos;s biggest music event."
+  next_title: "Eddie Piller"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 10800
+  channelid: "BBCSixMU"
+  bbc: "http://www.bbc.co.uk/radio/aod/6music"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+BBCSeven:
+  id: 8 
+  name: "BBC 7"
+  base_name: "bbc7"
+  url: "bbc7" 
+  tagline: "Unadulterated entertainment"
+  current_show: "When time was standardised in the 19th Century, not everyone was convinced by this stride in human progress. With James Bolam. [Rpt of today 10.15am]."
+  current_title: "Only a Matter of Time"
+  current_start: "2007-06-25 20:15:00"
+  current_duration: 2700
+  next_show: "Andy Parsons and Henry Naylor&apos;s topical stand-up and sketch show with Vicki Pepperdine. First broadcast July 2001. Episode 2 of 10. [Rpt of today 8.30am]."
+  next_title: "Pull-Out Sections"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 1800
+  channelid: "BBCSeven"
+  bbc: "http://www.bbc.co.uk/radio/aod/bbc7"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+OneXtra:
+  id: 9  
+  name: "BBC 1xtra"
+  base_name: "1xtra" 
+  url: "1xtra" 
+  tagline: "The home of new black music"
+  current_show: "Hot RnB in the mix. As part of 1Xtra Loves RnB month, JoJo is Ronnie&apos;s special guest. Txt us on 88111 [max cost 12p]. Coming up at 10.00pm - Hip Hop: Original Fever with P &amp; Skitz."
+  current_title: "RnB: Uptown Anthems"
+  current_start: "2007-06-25 18:00:00"
+  current_duration: 10800
+  next_show: "With P &amp; Skitz. Blazing hip hop from both sides of the Atlantic. Txt 88111 [max cost 12p] or go to bbc.co.uk/1xtra. Up at midnight - The House Session with Aaron Ross."
+  next_title: "Hip Hop: Original Fever"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 7200
+  channelid: "OneXtra"
+  bbc: "http://www.bbc.co.uk/radio/aod/1xtra"
+  ram: "http://www.bbc.co.uk/real/file"
+  asx: "http://www.bbc.co.uk/windows/file"
+  position: 10
+  active: 1
+BBCAsian:
+  id: 10 
+  name: "BBC Asian Network"
+  base_name: "asiannetwork" 
+  url: "asiannetwork" 
+  tagline: "British Asian music news and entertainment"
+  current_show: "Music and entertainment in Mirpuri, presented by Zarina Khan. East Midlands: Gujarati Programme with Mahesh Nathwani."
+  current_title: "Mirpuri Programme" 
+  current_start: "2007-06-25 19:00:00"
+  current_duration: 7200
+  next_show: "Bobby Friction presents cutting-edge Brit-Asian music, breaking new artists and tracks."
+  next_title: "Friction"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 10800
+  channelid: "BBCAsian"
+  bbc: "http://www.bbc.co.uk/radio/aod/asiannetwork"
+  ram: "http://www.bbc.co.uk/real/file"
+  position: 10
+  active: 1
+BBCWrld:
+  id: 11  
+  name: "BBC World Service"
+  base_name: "worldservice" 
+  url: "worldservice" 
+  tagline: "Impartial news and reports from around the world"
+  current_show: "International and British news." 
+  current_title: "Newshour"
+  current_start: "2007-06-25 20:06:00"
+  current_duration: 3240
+  next_show: "The latest news updates from around the world."
+  next_title: "World News"
+  next_start: "2007-06-25 21:00:00"
+  next_duration: 360
+  channelid: "BBCWrld"
+  bbc: "http://www.bbc.co.uk/radio/aod/worldservice"
+  ram: "http://www.bbc.co.uk/real/file"
+  asx: "http://www.bbc.co.uk/windows/file"
+  position: 10
+  active: 1
+DuncanRadio:
+  id: 12  
+  name: "BBC Duncan"
+  base_name: "duncanradio" 
+  url: "duncanradio" 
+  channelid: "DuncanRadio"
+  is_national: 0
+  bbc: "http://www.bbc.co.uk/radio/player"
+  ram: "http://www.bbc.co.uk/real/file"
+  asx:
+  position: 10
+  active: 1

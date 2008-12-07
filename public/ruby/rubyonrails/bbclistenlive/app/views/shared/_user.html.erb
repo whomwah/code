@@ -1,0 +1,6 @@
+<fb:user uid="<%= preference.user.fbid %>">
+	<div class="user">
+	<fb:profile-pic class="user_image" size="q" uid="<%= preference.user.fbid %>" linked="yes" width="20" height="20" />
+	<p class="user_meta"><%= profile_link(preference.user) %><%= image_power_up(preference.user) %> <%= network_listened_last_by(preference) %></p>
+	</div>
+</fb:user>

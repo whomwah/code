@@ -1,0 +1,8 @@
+<div class="media_links clearfix">
+  <ul>
+  <% formats.each do |prefix, link| -%>
+    <li class="<%= network.url %>"><%= link_to(image_tag("media/#{prefix.to_s}.png", :title => "Listen Live"), 
+      media_link(network, user, prefix), { :class => prefix.to_s, :target => "blank" }) %></li>
+  <% end -%>
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="container hangleft clearfix" id="top_listeners">
+  <h2>Top Listeners</h2>
+  <ol>
+  <% for preference in list -%>
+		<% if preference.user.is_page %>
+		<% else %>
+    <li><%= render(:partial => "shared/user", :locals => { :preference => preference }) %></li>
+		<% end -%>
+	<% end -%>
+  </ol>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fql_query_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" list="true">
+  <user>
+    <first_name>Duncan</first_name>
+    <last_name>Robertson</last_name>
+    <sex>male</sex>
+    <pic_small>http://profile.ak.facebook.com/profile5/1823/72/t522101041_8450.jpg</pic_small>
+    <pic_big>http://profile.ak.facebook.com/profile5/1823/72/n522101041_8450.jpg</pic_big>
+    <pic_square>http://profile.ak.facebook.com/profile5/1823/72/q522101041_8450.jpg</pic_square>
+    <current_location>
+      <city>Kingston-Upon-Thames</city>
+      <state>MA<state/>
+      <country>England</country>
+      <zip>KT25EU</zip>
+    </current_location>
+    <timezone>1</timezone>
+    <birthday>April 6, 1970</birthday>
+  </user>
+</fql_query_response>

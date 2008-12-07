@@ -1,0 +1,35 @@
+<% content_for(:header) do %>
+<%= render(:partial => "css/mine") %>
+<% end %>
+
+<p class="intro"><strong><fb:name uid="loggedinuser" firstnameonly="true" linked="false" useyou="false" capitalize="true" /></strong>, these are your chosen networks...</p>
+<ul class="clearfix networks">
+<% for network in @user.networks -%>
+  <li class="clearfix">
+  <div class="stats">
+    <%= render(:partial => "shared/logo", :locals => { :n => network }) %>
+    <strong><%= network.name %></strong> <em><%= pluralize(@user.preferences.find_by_network_id(network.id).clicks, 'Listen') %></em>
+  </div>
+  <%= show_media_links(network, @user) -%>
+  <div class="meta">
+    <% if network.is_national -%>
+    <div class="now">
+      <h3><span class="state">Now</span> <span class="time"><%= network.current_start_finish %></span></h3>
+      <h2><%= network.current_title %></h2>
+      <p><%= network.current_show %></p>
+    </div>
+    <div class="next">
+      <h3><span class="state">Next</span> <span class="time"><%= network.next_start_finish %></span></h3>
+      <h2><%= network.next_title %></h2>
+      <p><%= network.next_show %></p>
+    </div>
+    <% else -%>
+    <div class="now">
+      <h3><span class="state">Now</span></h3>
+      <p><%= network.tagline %></p>
+    </div>
+    <% end -%>
+  </div>
+  </li>
+<% end -%>
+</ul>
