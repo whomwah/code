@@ -1,7 +1,9 @@
 An iPhone interface into http://bbc.co.uk/programmes
 ----------------------------------------------------
 
-This was an experiment in building an native iphone webapp using just
-Dashcode as the IDE. You can drill down from tv and radio services and
-view day schedules. Feel free to borrow and extend, as long as you give
-me a little mention, thanks.
+The source for this project has it's own project page at
+
+ http://whomwah.github.com/bbcprogrammes_iphone_webapp/
+
+Here you can download the source, for fork the project 
+to extend the current feature set.
