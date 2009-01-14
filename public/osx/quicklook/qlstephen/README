@@ -1,0 +1,13 @@
+QuickLookStephen - A QuickLook plugin that lets you view plain text files without
+a file extension. Files like:
+
+ README
+ INSTALL
+ CapFile
+ CHANGELOG
+ etc...
+
+This now has it's own project page at:
+
+ http://whomwah.github.com/qlstephen
+
