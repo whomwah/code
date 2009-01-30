@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'cgi'
+
+`open "http://www.google.co.uk/search?q=#{CGI.escape(ARGV.join(' '))}"`
