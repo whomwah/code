@@ -1,5 +1,5 @@
 //
-//  Service.h
+//  BBCService.h
 //
 //  Created by Duncan Robertson on 06/01/2009.
 //  Copyright 2009 Whomwah. All rights reserved.
@@ -8,7 +8,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface Service : NSObject {
+@interface BBCService : NSObject {
   NSString *key;
   NSString *title;
   NSString *desc;

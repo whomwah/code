@@ -1,14 +1,14 @@
 //
-//  Broadcast.m
+//  BBCBroadcast.m
 //
 //  Created by Duncan Robertson on 06/01/2009.
 //  Copyright 2009 Whomwah. All rights reserved.
 //
 
-#import "Broadcast.h"
-#import "NSString-Utilities.h"
+#import "BBCBroadcast.h"
+#import "DRNSString-Utilities.h"
 
-@implementation Broadcast
+@implementation BBCBroadcast
 
 @synthesize title, subtitle, displayTitle, displaySubtitle, shortSynopsis, 
             pid, duration, bStart, bEnd, available, radioAvailability, tvAvailability;

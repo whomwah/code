@@ -5,14 +5,14 @@
 //  Copyright 2008 Whomwah. All rights reserved.
 //
 
-#import "Broadcast.h"
-#import "Service.h"
-#import "Schedule.h"
-#import "NSString-Utilities.h"
+#import "BBCBroadcast.h"
+#import "BBCService.h"
+#import "BBCSchedule.h"
+#import "DRNSString-Utilities.h"
 
 #define API_URL @"http://www.bbc.co.uk/%@programmes/schedules%@%@.xml";
 
-@implementation Schedule
+@implementation BBCSchedule
 
 @synthesize lastUpdated, service, broadcasts;
 
@@ -36,7 +36,7 @@
   return self;
 }
 
-- (Schedule *)fetchScheduleForDate:(NSDate *)date
+- (BBCSchedule *)fetchScheduleForDate:(NSDate *)date
 {
   [self fetch:[self buildUrlForDate:date]];
   return self;
@@ -129,7 +129,7 @@
   if (error != nil)
     NSLog(@"An Error occured: %@", error);
   
-  Service *s = [[Service alloc] initUsingServiceXML:data];
+  BBCService *s = [[BBCService alloc] initUsingServiceXML:data];
   [self setService:s];
   [s release];
 }
@@ -146,7 +146,7 @@
   NSMutableArray *temp = [NSMutableArray array];
   
   for (NSXMLNode *broadcast in data) {    
-    Broadcast *b = [[Broadcast alloc] initUsingBroadcastXML:broadcast];
+    BBCBroadcast *b = [[BBCBroadcast alloc] initUsingBroadcastXML:broadcast];
     [temp addObject:b];
     [b release];
   }
@@ -154,11 +154,11 @@
   [self setBroadcasts:temp];
 }
 
-- (Broadcast *)currBroadcast
+- (BBCBroadcast *)currBroadcast
 {
   NSDate *now = [NSDate date];
   
-  for (Broadcast *broadcast in broadcasts) {
+  for (BBCBroadcast *broadcast in broadcasts) {
     if (([now compare:[broadcast bStart]] == NSOrderedDescending) && 
         ([now compare:[broadcast bEnd]] == NSOrderedAscending)) {
       return broadcast;
@@ -167,7 +167,7 @@
   return nil;
 }
 
-- (Broadcast *)nextBroadcast
+- (BBCBroadcast *)nextBroadcast
 {
   int index = [broadcasts indexOfObject:[self currBroadcast]];
   
@@ -178,7 +178,7 @@
   return [broadcasts objectAtIndex:index];
 }
 
-- (Broadcast *)prevBroadcast
+- (BBCBroadcast *)prevBroadcast
 {
   int index = [broadcasts indexOfObject:[self currBroadcast]];
   
@@ -191,7 +191,7 @@
 
 - (NSString *)broadcastDisplayTitleForIndex:(int)index
 {
-  Broadcast *bc = [[self broadcasts] objectAtIndex:index];
+  BBCBroadcast *bc = [[self broadcasts] objectAtIndex:index];
   if (!bc)
     return service.desc;
 

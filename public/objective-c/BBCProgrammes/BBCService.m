@@ -1,14 +1,14 @@
 //
-//  Service.m
+//  BBCService.m
 //
 //  Created by Duncan Robertson on 06/01/2009.
 //  Copyright 2009 Whomwah. All rights reserved.
 //
 
-#import "Service.h"
-#import "NSString-Utilities.h"
+#import "BBCService.h"
+#import "DRNSString-Utilities.h"
 
-@implementation Service
+@implementation BBCService
 
 @synthesize key, title, desc, outletKey, outletTitle, outletDesc;
 
