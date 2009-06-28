@@ -7,6 +7,7 @@
 
 #import "BBCBroadcast.h"
 #import "DRNSString-Utilities.h"
+#import "NSCalendarDate+ISO8601Parsing.h"
 
 @implementation BBCBroadcast
 
@@ -52,11 +53,12 @@
 - (NSDate *)fetchDateForXPath:(NSString *)string withNode:(NSXMLNode *)node
 {
   NSString *stringValue = [NSString stringForXPath:string ofNode:node];
-  
+
   if (stringValue == nil)
     return nil;
   
-  NSDate *date = [NSDate dateWithNaturalLanguageString:stringValue]; 
+  NSCalendarDate *date = [NSCalendarDate calendarDateWithString:stringValue 
+                                                       strictly:NO];
   return date;
 }
 
