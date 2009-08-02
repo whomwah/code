@@ -1,0 +1,151 @@
+// General Text 
+
+Hydrate
+OK
+Done
+Oops
+Cancel
+Close
+Open
+Instructions
+About
+TOUCH HERE TO CANCEL
+You need to Hydrate
+You reached your goal!
+You've drunk %@ today so far
+You drank %@
+%@ left to go
+Your goal today is %@
+TOUCH HERE
+to confirm adding
+Settings
+
+// these are the header title for each tableview page
+
+Measurements
+Your unit of measurement
+Your daily goal
+Your cup size
+
+// these are the footer title for each tableview page
+
+Touch any of the rows to edit it's settings. More information about each setting is provided within.
+This sets the unit of measurement that all liquid amounts will displayed in. NOTE: The measurement 'Glass' is fictional, but is there for simplicity sake.
+This sets the default amount you expect to drink in a day, based on your choosen unit of measurement. This only effects the day you are currently on, so you can change this every day should you wish.
+This sets how much you drink by default in one go. The amount on the right is the how much this selection represents, based on your chosen unit  of measurement. This can be adjusted daily if you wish.
+
+// page titles used on each preference choice page
+
+Units
+Daily Goal
+Vessel
+
+// cell labels used on preferences index page
+
+Units
+Your daily goal
+Your default drink size
+
+// the different cup types available
+
+A Glass
+A Can
+A Small Bottle
+A Medium Bottle
+A Large Bottle
+
+// the different measurements available
+
+Glass
+Glasses
+Millilitres
+Litres
+Pints
+Cups US
+Ounces
+
+// cancel event alert view text
+
+Remove Last Entry
+You are removing the last entry from the currently displayed day?
+
+// Archive views labels                        
+
+Your Progress Summary
+Showing how much you actually drank vs your goal
+Last 24 hours
+Last 48 hours
+Last 7 days
+Last 30 days
+Last 60 days
+Last 182 days
+Last 365 days
+
+// days of the week
+
+MON
+TUE
+WED
+THU
+FRI
+SAT
+SUN
+
+// months of year
+
+January
+February
+March
+April
+May
+June
+July
+August
+Septeber
+October
+November
+December
+
+// other text
+
+Development and Design
+Design
+3-D Glass Rendering
+Hydrate helps you manage your daily water intake
+Instructions to get started
+Tap the tumbler to add a new entry
+Progress is shown at the top of the page
+To remove an entry, just shake the phone
+Holding the phone in landscape mode will display a summary
+You can look back at previous days, by scrolling the calendar at the bottom of the screen
+Double tapping on the calendar will take you back to the current day
+Via the settings screen you can adjust:
+The unit of measurements the app uses
+Your current goal for the day
+Your drink size
+Your Feedback
+Hydrate is a ongoing personal project which will be extended with new features over time, watch out for free updates. If there is something missing that you think would be useful, please contact <a href=mailto:hydrate@whomwah.com>hydrate@whomwah.com</a>
+
+// intro for itunes
+
+Have you drunk enough water today? Maybe Hydrate can help?
+
+Hydrate helps you manage your daily water intake through an attractive and simple interface. Start logging your daily water intake straight away using the simple presets. All the main features are easily accessible from the main screen. Simply add new information with a couple of touches to the screen, or can look back and edit your drinking history via the calendar scroller. You can even remove an entry, if you have made a mistake, by shaking the phone. View a graphical summary by turning your phone to landscape mode.
+
+If you like to customise, you can set your own goals, the amount you drink at one time, as well as the units of measurement that best suit you. There are also instructions on how to get going should you need them.
+
+FEATURES
+
+- Simple and Beautiful Interface
+- Easy Customisation
+- Fast to Load
+- Easily Accessible History
+- Photorealistic Graphics
+- Fun Effects
+- Graphical Summary
+
+UPDATES
+
+Hydrate is being actively developed, and new graphical features as well as push notifications to remind you to have a drink are in development, and will be available as a free upgrade as soon as they are ready.
+
+

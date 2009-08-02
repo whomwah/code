@@ -1,0 +1,150 @@
+/ / Texto general 
+
+Hidratación 
+Aceptar 
+Hecho 
+¡Vaya! 
+Cancelar 
+Cerrar 
+Abrir 
+Instrucciones 
+Sobre 
+TOQUE AQUÍ PARA CANCELAR 
+Usted necesidad de Hidratación 
+Usted llegó a su meta! 
+Has bebido %@ hoy hasta el momento 
+Que bebió %@ 
+%@ La izquierda para ir 
+Su objetivo actual es %@ 
+TOQUE AQUÍ 
+para confirmar la adición de 
+Configuración 
+
+/ / Estos son los títulos de cabecera de cada página TableView 
+
+Mediciones 
+Su unidad de medida 
+Su meta diaria 
+Su taza de tamaño 
+
+/ / Estos son los pie de página para cada título TableView página 
+
+Toque ninguna de las filas para editar su configuración. Más información acerca de cada ajuste se ofrece en. 
+Esto establece la unidad de medida de líquidos que todas las cantidades mostradas pulg NOTA: La medición "de vidrio" es ficticia, pero hay razones de simplicidad. 
+Esto establece el monto por defecto que se pueden esperar para tomar en un día, sobre la base de su unidad de medida elegida. Esto sólo efectos el día en que se encuentra en este momento, así que puede cambiar todos los días si desea. 
+Esto establece la cantidad que beben de forma predeterminada en una sola vez. El importe de la derecha es el cuánto representa esta selección, sobre la base de su unidad de medida elegida. Esto puede ser ajustada diariamente si así lo desea. 
+
+/ / Títulos de artículos utilizados en cada elección la página de preferencias 
+
+Unidades 
+Meta diaria 
+Buque 
+
+/ / Elemento etiquetas utilizadas en las preferencias de la página índice 
+
+Unidades 
+Su meta diaria 
+Su bebida tamaño por defecto 
+
+/ / Los diferentes tipos disponibles taza 
+
+Un vaso 
+¿Puede una 
+Una pequeña botella 
+Una botella de Medio 
+Una botella grande 
+
+/ / Los diferentes mediciones disponibles 
+
+Vidrio 
+Gafas 
+Mililitros 
+Litros 
+Pintas 
+Copas de EE.UU. 
+Onzas 
+
+/ / Cancelar el evento de alerta ver texto 
+
+Eliminar Última Entrada 
+Usted es la eliminación de la última entrada de la muestra actualmente los días? 
+
+/ / Archivo opiniones etiquetas 
+
+Resumen de su progreso 
+Listado cuánto bebió en realidad su meta vs 
+Últimas 24 horas 
+Últimas 48 horas 
+Últimos 7 días 
+Últimos 30 días 
+Últimos 60 días 
+Último 182 días 
+Último 365 días 
+
+/ / Los días de la semana 
+
+Lunes 
+Martes 
+Miércoles 
+JUE 
+Viernes 
+Sábado 
+Domingo 
+
+/ / Meses del año 
+
+Enero 
+Febrero 
+Marzo 
+Abril 
+Mayo 
+Junio 
+Julio 
+Agosto 
+Septeber 
+Octubre 
+Noviembre 
+Diciembre 
+
+/ / Otro texto 
+
+Desarrollo y Diseño 
+Diseñar 
+3-D de vidrio Renderizado 
+Hidratación le ayuda a administrar diariamente la ingesta de agua 
+Instrucciones para empezar 
+Toque en el vaso para añadir una nueva entrada 
+Progreso aparece en la parte superior de la página 
+Para eliminar una entrada, sólo agitar el teléfono 
+Sujetando el teléfono en modo horizontal, se mostrará un resumen 
+Usted puede mirar hacia atrás en los días anteriores, desplazándose por el calendario en la parte inferior de la pantalla 
+Doble toque en el calendario tendrá que volver al día actual 
+A través de la pantalla de configuración puede ajustar: 
+La unidad de mediciones de la aplicación utiliza 
+Su objetivo actual para el día 
+Tamaño de su bebida 
+Su Feedback 
+Hidrato es un proyecto personal en curso que se ampliará con las nuevas características en el tiempo, ten cuidado con las actualizaciones gratuitas. Si falta algo que le parece útil, póngase en contacto con <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+
+/ / Intro para itunes 
+
+¿Has bebido suficiente agua hoy? Hidratación quizás puede ayudar? 
+
+Hidratación le ayuda a administrar diariamente la ingesta de agua a través de una interfaz simple y hermoso. Puede iniciar el registro de la ingesta diaria de agua de inmediato utilizando el sencillo método de presets. Todas las principales características son fácilmente accesibles desde la pantalla principal. Usted puede simplemente añadir la nueva información con un par de toques a la pantalla. Usted puede mirar hacia atrás y modificar su forma de beber a través de la historia del calendario desplazador. Puede eliminar una entrada, incluso si ha cometido un error, por agitación de la pantalla. Si el teléfono a su vez, el modo horizontal, verá un resumen gráfico puro de todos su historia. 
+
+Si te gusta personalizar, usted puede configurar su propios objetivos, la cantidad que usted bebe a la vez, así como las unidades de medida que mejor le conviene. También hay instrucciones sobre cómo ponerse en marcha en caso de que los necesitan. 
+
+CARACTERÍSTICAS 
+
+- Interfaz simple y hermoso 
+- Fácil personalización 
+- Rápido para cargar 
+- Fácilmente accesible Historia 
+- Gráficos photorealistic 
+- Diversión Efectos 
+- Resumen gráfico 
+- Soporte de múltiples idiomas 
+
+ACTUALIZACIONES 
+
+Hidrato se está desarrollando activamente y nuevas características gráficas, así como impulsar las notificaciones para recordarle que debe tomar una copa se encuentran en desarrollo, y estará disponible como una actualización gratuita desde el momento en que estén dispuestos. 

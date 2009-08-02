@@ -1,0 +1,150 @@
+/ / Texte général 
+
+Hydrate 
+OK 
+Fait 
+Oops 
+Annuler 
+Fermer 
+Ouvert 
+Instructions 
+À propos de 
+TOUCH ici pour annuler 
+Vous avez besoin d'hydrates de 
+Vous avez atteint votre objectif! 
+Vous avez bu %@ aujourd'hui, à ce jour 
+Vous avez bu %@ 
+%@ Gauche pour aller 
+Votre objectif aujourd'hui est de %@ 
+TOUCH ICI 
+pour confirmer l'ajout de 
+Paramètres 
+
+/ / Ce sont l'en-tête le titre de chaque page TableView 
+
+Mesures 
+Votre unité de mesure 
+Votre objectif quotidien 
+Votre coupe de taille 
+
+/ / Ce sont les bas de titre pour chaque page TableView 
+
+Appuyez sur une des lignes à modifier ses paramètres. Plus d'informations sur chaque paramètre est fournie dans. 
+Ceci définit l'unité de mesure que tous les liquides montants affichés po NOTE: La mesure "Glass" est fictive, mais existe-t-il un souci de simplicité. 
+Ceci détermine le montant par défaut vous vous attendez à boire dans une journée, sur la base de votre unité de mesure. Cela ne fait que les effets de la journée où vous vous trouvez actuellement, de sorte que vous pouvez changer tous les jours si vous le souhaitez. 
+Cela définit ce que vous buvez par défaut en une seule fois. Le montant du droit est la quantité de cette sélection représente, sur la base de votre unité de mesure. Ceci peut être ajusté tous les jours si vous le souhaitez. 
+
+/ / Les titres de page sur chaque page de préférences choix 
+
+Unités 
+Daily But 
+Navire 
+
+/ / Cellule des étiquettes utilisées sur la page d'index préférences 
+
+Unités 
+Votre objectif quotidien 
+Votre boisson taille par défaut 
+
+/ / Coupe les différents types disponibles 
+
+Un verre 
+A Can 
+Une petite bouteille 
+Un moyen de bouteilles 
+Une grande bouteille 
+
+/ / Les différentes mesures disponibles 
+
+Glass 
+Lunettes 
+Millilitres 
+Litres 
+Pints 
+Coupes US 
+Ounces 
+
+/ / Annuler cas d'alerte avis texte 
+
+Retirer Dernière entrée 
+Vous supprimez l'entrée de la dernière affichée jour? 
+
+/ / Archives des points de vue des étiquettes 
+
+Vos progrès Sommaire 
+Voici combien vous avez réellement bu vs votre objectif 
+Dernières 24 heures 
+Dernières 48 heures 
+Les 7 derniers jours 
+30 derniers jours 
+60 derniers jours 
+182 Mise à jour 
+365 derniers jours 
+
+/ / Jour de la semaine 
+
+Lundi 
+Mardi 
+Mercredi 
+THU 
+Vendredi 
+Samedi 
+Dimanche 
+
+/ / Mois de l'année 
+
+Janvier 
+Février 
+Mars 
+Avril 
+Mai 
+Juin 
+Juillet 
+Août 
+Septeber 
+Octobre 
+Novembre 
+Décembre 
+
+/ / Texte 
+
+Développement et Design 
+Conception 
+3-D Verre de rendu 
+Hydrate vous aide à gérer votre consommation quotidienne d'eau 
+Instructions pour démarrer 
+Appuyez sur le tambour d'ajouter une nouvelle entrée 
+Le progrès est affiché en haut de la page 
+Pour supprimer une entrée, il suffit de secouer le téléphone 
+Tenir le téléphone en mode paysage affiche un résumé 
+Vous pouvez regarder jours précédents, en faisant défiler le calendrier en bas de l'écran 
+Double cliquant sur le calendrier, vous reviendrez à la journée en cours 
+Via l'écran des paramètres, vous pouvez régler: 
+L'unité de mesure de l'application utilise 
+Votre objectif pour la journée 
+Votre boisson taille 
+Votre opinion 
+Hydrate en cours est un projet personnel qui sera étendu à de nouvelles fonctionnalités au fil du temps, surveillez les mises à jour gratuites. Si quelque chose manque que vous, serait utile, s'il vous plaît contactez <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+
+/ / Intro pour itunes 
+
+Avez-vous déjà bu assez d'eau aujourd'hui? Peut-être Hydrate peut vous aider? 
+
+Hydrate vous aide à gérer votre consommation quotidienne d'eau par le biais d'une interface simple et attractive. Début d'exploitation forestière de votre apport quotidien en eau directement à l'aide du simple presets. Toutes les principales fonctions sont facilement accessibles depuis l'écran principal. Il vous suffit d'ajouter de nouvelles informations avec quelques touches à l'écran, ou peut regarder en arrière et modifier votre histoire potable via le calendrier de défilement. Vous pouvez même supprimer une entrée, si vous avez fait une erreur, en agitant le téléphone. Voir un graphique en le tournant de votre téléphone à votre mode paysage. 
+
+Si vous souhaitez personnaliser, vous pouvez définir vos propres objectifs, le montant que vous boire à un moment donné, ainsi que les unités de mesure qui vous convient le mieux. Il ya aussi des instructions sur la façon d'y aller si vous avez besoin d'eux.
+
+CARACTERISTIQUES 
+
+- Simple et belle interface 
+- Facilité de personnalisation 
+- Rapide à charger 
+- Facilement accessible Histoire 
+- Photo-graphiques 
+- Fun Effects 
+- Synthèse graphique 
+- Multi Language Support 
+
+MISES À JOUR 
+
+Hydrate est actuellement en développement, et de nouvelles fonctionnalités graphiques ainsi que les notifications push pour vous rappeler de boire un verre sont en cours de développement et sera disponible gratuitement en mise à jour dès qu'elles sont prêtes.

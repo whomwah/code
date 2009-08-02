@@ -1,0 +1,150 @@
+/ / Algemene tekst 
+
+Hydraat 
+OK 
+Gedaan 
+Oeps 
+Annuleren 
+Sluiten 
+Open 
+Instructies 
+Over 
+TOUCH hier om te annuleren 
+U moet Hydrate 
+U bereikt uw doel! 
+Je hebt gedronken %@ vandaag tot nu toe 
+Je dronk %@ 
+%@ Links te gaan 
+Je doel vandaag %@ 
+TOUCH HIER 
+te bevestigen voegen 
+Instellingen 
+
+/ / Dit zijn de kop-titel voor elke pagina TableView 
+
+Metingen 
+Uw meeteenheid 
+Uw dagelijkse doel 
+Uw kop grootte 
+
+/ / Dit zijn de voettekst titel voor elke pagina TableView 
+
+Raak een van de rijen te bewerken is het instellingen. Meer informatie over elke instelling is binnen. 
+Dit zet de meeteenheid dat alle vloeibare bedragen weergegeven inch OPMERKING: Het meten 'Glas' is verzonnen, maar is er voor de eenvoud wille. 
+Dit zet de standaard bedrag dat u verwacht te drinken op een dag, op basis van uw gekozen meeteenheid. Dit alleen effect op de dag die u op dit moment op, dus u kunt dit veranderen elke dag moet u dat wenst. 
+Dit zet hoeveel je drinkt standaard in een keer. Het bedrag aan de rechterzijde is de hoeveel deze selectie is gebaseerd op de gekozen meeteenheid. Dit kan dagelijks worden aangepast indien u dat wenst. 
+
+/ / Paginatitels gebruikt op elk preferent keuze pagina 
+
+Eenheden 
+Dagelijks Doelpunt 
+Vaartuig 
+
+/ / Cel labels gebruikt op voorkeuren indexpagina 
+
+Eenheden 
+Uw dagelijkse doel 
+Uw standaard drank grootte 
+
+/ / De verschillende soorten beker beschikbaar 
+
+Een glas 
+A kan 
+Een klein flesje 
+Een Medium Fles 
+Een Grote Fles 
+
+/ / De verschillende metingen beschikbaar 
+
+Glas 
+Bril 
+Milliliters 
+Liter 
+Pints 
+Bekers VS 
+Ounces 
+
+/ / Annuleren geval alert oog tekst 
+
+Verwijder Last Entry 
+U bent het verwijderen van de laatste vermelding van de huidige dag? 
+
+/ / Archief standpunten etiketten 
+
+Uw Vooruitgang Samenvatting 
+Resultaat hoeveel u eigenlijk dronk vs uw doel 
+Laatste 24 uur 
+Laatste 48 uur 
+Afgelopen 7 dagen 
+Afgelopen 30 dagen 
+Laatste 60 dagen 
+Laatste 182 dagen 
+Laatste 365 dagen 
+
+/ / Dagen van de week 
+
+Maandag 
+Dinsdag 
+Woensdag 
+THU 
+Vrijdag 
+Zaterdag 
+Zondag 
+
+/ / Maanden van het jaar 
+
+Januari 
+Februari 
+Maart 
+April 
+Kan 
+Juni 
+Juli 
+Augustus 
+Septeber 
+Oktober 
+November 
+December 
+
+/ / Andere tekst 
+
+Ontwikkeling en Ontwerp 
+Ontwerpen 
+3-D Glas Weergavestijl 
+Hydraat helpt u bij het beheren van uw dagelijkse wateropname 
+Instructies aan de slag 
+Tik op de tumbler voor het toevoegen van een nieuw item 
+Voortgang wordt weergegeven aan de bovenkant van de pagina 
+Voor het verwijderen van een item, maar schud de telefoon 
+Houd de telefoon in landscape-modus zal er een samenvatting 
+U kan terugblikken op de vorige dagen, door te bladeren de kalender aan de onderkant van het scherm 
+Dubbel tikken op de kalender komt u terug naar de huidige dag 
+Via de instellingen kunt u aanpassen: 
+De eenheid van de metingen de app gebruikt 
+Uw huidige doel voor de dag 
+Uw drankje grootte 
+Uw feedback 
+Hydraat is een voortdurende persoonlijke project dat zal worden uitgebreid met nieuwe functies in de tijd, kijk uit voor de gratis updates. Als er iets ontbreekt dat je denkt dat nuttig zou zijn, kunt u contact opnemen met <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+
+/ / Intro voor iTunes 
+
+Heb je genoeg water gedronken vandaag? Misschien hydraat kan helpen? 
+
+Hydraat helpt u bij het beheren van uw dagelijkse inname van water door middel van een aantrekkelijke en eenvoudige interface. Start kappen uw dagelijkse wateropname meteen met behulp van de eenvoudige presets. Alle belangrijke functies zijn gemakkelijk bereikbaar vanaf het hoofdscherm. Simpelweg toevoegen van nieuwe informatie met een paar toetsen op het scherm, of terug kunnen kijken en bewerken van uw drinken geschiedenis via de kalender scroller. U kunt zelfs verwijderen van een item, als je een fout hebt gemaakt, door schudden van de telefoon. Bekijk een grafische samenvatting door de telefoon op het landschap modus. 
+
+Als u wilt aanpassen, kunt u uw eigen doelen, het bedrag dat u drinken in een keer, evenals de meeteenheden die het beste bij jou past. Er zijn ook instructies over hoe te gaan moet u ze nodig hebt. 
+
+KENMERKEN 
+
+- Eenvoudige en Beautiful Interface 
+- Easy Customisation 
+- Snel laden 
+- Gemakkelijk toegankelijk Geschiedenis 
+- Fotorealistische graphics 
+- Fun Effecten 
+- Grafische Samenvatting 
+- Multi Language Support 
+
+UPDATES 
+
+Hydraat wordt actief ontwikkeld, en de nieuwe grafische functies evenals push kennisgevingen aan herinneren u een drankje zijn in ontwikkeling en zal beschikbaar zijn als een gratis upgrade, zodra zij daar klaar voor zijn. 
