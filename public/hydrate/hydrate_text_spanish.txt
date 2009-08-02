@@ -1,56 +1,56 @@
 / / Texto general 
 
-Hidratación 
+Hidrataci√≥n 
 Aceptar 
 Hecho 
-¡Vaya! 
+¬°Vaya! 
 Cancelar 
 Cerrar 
 Abrir 
 Instrucciones 
 Sobre 
-TOQUE AQUÍ PARA CANCELAR 
-Usted necesidad de Hidratación 
-Usted llegó a su meta! 
+TOQUE AQU√ç PARA CANCELAR 
+Usted necesidad de Hidrataci√≥n 
+Usted lleg√≥ a su meta! 
 Has bebido %@ hoy hasta el momento 
-Que bebió %@ 
+Que bebi√≥ %@ 
 %@ La izquierda para ir 
 Su objetivo actual es %@ 
-TOQUE AQUÍ 
-para confirmar la adición de 
-Configuración 
+TOQUE AQU√ç 
+para confirmar la adici√≥n de 
+Configuraci√≥n 
 
-/ / Estos son los títulos de cabecera de cada página TableView 
+/ / Estos son los t√≠tulos de cabecera de cada p√°gina TableView 
 
 Mediciones 
 Su unidad de medida 
 Su meta diaria 
-Su taza de tamaño 
+Su taza de tama√±o 
 
-/ / Estos son los pie de página para cada título TableView página 
+/ / Estos son los pie de p√°gina para cada t√≠tulo TableView p√°gina 
 
-Toque ninguna de las filas para editar su configuración. Más información acerca de cada ajuste se ofrece en. 
-Esto establece la unidad de medida de líquidos que todas las cantidades mostradas pulg NOTA: La medición "de vidrio" es ficticia, pero hay razones de simplicidad. 
-Esto establece el monto por defecto que se pueden esperar para tomar en un día, sobre la base de su unidad de medida elegida. Esto sólo efectos el día en que se encuentra en este momento, así que puede cambiar todos los días si desea. 
-Esto establece la cantidad que beben de forma predeterminada en una sola vez. El importe de la derecha es el cuánto representa esta selección, sobre la base de su unidad de medida elegida. Esto puede ser ajustada diariamente si así lo desea. 
+Toque ninguna de las filas para editar su configuraci√≥n. M√°s informaci√≥n acerca de cada ajuste se ofrece en. 
+Esto establece la unidad de medida de l√≠quidos que todas las cantidades mostradas pulg NOTA: La medici√≥n "de vidrio" es ficticia, pero hay razones de simplicidad. 
+Esto establece el monto por defecto que se pueden esperar para tomar en un d√≠a, sobre la base de su unidad de medida elegida. Esto s√≥lo efectos el d√≠a en que se encuentra en este momento, as√≠ que puede cambiar todos los d√≠as si desea. 
+Esto establece la cantidad que beben de forma predeterminada en una sola vez. El importe de la derecha es el cu√°nto representa esta selecci√≥n, sobre la base de su unidad de medida elegida. Esto puede ser ajustada diariamente si as√≠ lo desea. 
 
-/ / Títulos de artículos utilizados en cada elección la página de preferencias 
+/ / T√≠tulos de art√≠culos utilizados en cada elecci√≥n la p√°gina de preferencias 
 
 Unidades 
 Meta diaria 
 Buque 
 
-/ / Elemento etiquetas utilizadas en las preferencias de la página índice 
+/ / Elemento etiquetas utilizadas en las preferencias de la p√°gina √≠ndice 
 
 Unidades 
 Su meta diaria 
-Su bebida tamaño por defecto 
+Su bebida tama√±o por defecto 
 
 / / Los diferentes tipos disponibles taza 
 
 Un vaso 
-¿Puede una 
-Una pequeña botella 
+¬øPuede una 
+Una peque√±a botella 
 Una botella de Medio 
 Una botella grande 
 
@@ -66,32 +66,32 @@ Onzas
 
 / / Cancelar el evento de alerta ver texto 
 
-Eliminar Última Entrada 
-Usted es la eliminación de la última entrada de la muestra actualmente los días? 
+Eliminar √öltima Entrada 
+Usted es la eliminaci√≥n de la √∫ltima entrada de la muestra actualmente los d√≠as? 
 
 / / Archivo opiniones etiquetas 
 
 Resumen de su progreso 
-Listado cuánto bebió en realidad su meta vs 
-Últimas 24 horas 
-Últimas 48 horas 
-Últimos 7 días 
-Últimos 30 días 
-Últimos 60 días 
-Último 182 días 
-Último 365 días 
+Listado cu√°nto bebi√≥ en realidad su meta vs 
+√öltimas 24 horas 
+√öltimas 48 horas 
+√öltimos 7 d√≠as 
+√öltimos 30 d√≠as 
+√öltimos 60 d√≠as 
+√öltimo 182 d√≠as 
+√öltimo 365 d√≠as 
 
-/ / Los días de la semana 
+/ / Los d√≠as de la semana 
 
 Lunes 
 Martes 
-Miércoles 
+Mi√©rcoles 
 JUE 
 Viernes 
-Sábado 
+S√°bado 
 Domingo 
 
-/ / Meses del año 
+/ / Meses del a√±o 
 
 Enero 
 Febrero 
@@ -108,43 +108,43 @@ Diciembre
 
 / / Otro texto 
 
-Desarrollo y Diseño 
-Diseñar 
+Desarrollo y Dise√±o 
+Dise√±ar 
 3-D de vidrio Renderizado 
-Hidratación le ayuda a administrar diariamente la ingesta de agua 
+Hidrataci√≥n le ayuda a administrar diariamente la ingesta de agua 
 Instrucciones para empezar 
-Toque en el vaso para añadir una nueva entrada 
-Progreso aparece en la parte superior de la página 
-Para eliminar una entrada, sólo agitar el teléfono 
-Sujetando el teléfono en modo horizontal, se mostrará un resumen 
-Usted puede mirar hacia atrás en los días anteriores, desplazándose por el calendario en la parte inferior de la pantalla 
-Doble toque en el calendario tendrá que volver al día actual 
-A través de la pantalla de configuración puede ajustar: 
-La unidad de mediciones de la aplicación utiliza 
-Su objetivo actual para el día 
-Tamaño de su bebida 
+Toque en el vaso para a√±adir una nueva entrada 
+Progreso aparece en la parte superior de la p√°gina 
+Para eliminar una entrada, s√≥lo agitar el tel√©fono 
+Sujetando el tel√©fono en modo horizontal, se mostrar√° un resumen 
+Usted puede mirar hacia atr√°s en los d√≠as anteriores, desplaz√°ndose por el calendario en la parte inferior de la pantalla 
+Doble toque en el calendario tendr√° que volver al d√≠a actual 
+A trav√©s de la pantalla de configuraci√≥n puede ajustar: 
+La unidad de mediciones de la aplicaci√≥n utiliza 
+Su objetivo actual para el d√≠a 
+Tama√±o de su bebida 
 Su Feedback 
-Hidrato es un proyecto personal en curso que se ampliará con las nuevas características en el tiempo, ten cuidado con las actualizaciones gratuitas. Si falta algo que le parece útil, póngase en contacto con <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+Hidrato es un proyecto personal en curso que se ampliar√° con las nuevas caracter√≠sticas en el tiempo, ten cuidado con las actualizaciones gratuitas. Si falta algo que le parece √∫til, p√≥ngase en contacto con <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
 
 / / Intro para itunes 
 
-¿Has bebido suficiente agua hoy? Hidratación quizás puede ayudar? 
+¬øHas bebido suficiente agua hoy? Hidrataci√≥n quiz√°s puede ayudar? 
 
-Hidratación le ayuda a administrar diariamente la ingesta de agua a través de una interfaz simple y hermoso. Puede iniciar el registro de la ingesta diaria de agua de inmediato utilizando el sencillo método de presets. Todas las principales características son fácilmente accesibles desde la pantalla principal. Usted puede simplemente añadir la nueva información con un par de toques a la pantalla. Usted puede mirar hacia atrás y modificar su forma de beber a través de la historia del calendario desplazador. Puede eliminar una entrada, incluso si ha cometido un error, por agitación de la pantalla. Si el teléfono a su vez, el modo horizontal, verá un resumen gráfico puro de todos su historia. 
+Hidrataci√≥n le ayuda a administrar diariamente la ingesta de agua a trav√©s de una interfaz simple y hermoso. Puede iniciar el registro de la ingesta diaria de agua de inmediato utilizando el sencillo m√©todo de presets. Todas las principales caracter√≠sticas son f√°cilmente accesibles desde la pantalla principal. Usted puede simplemente a√±adir la nueva informaci√≥n con un par de toques a la pantalla. Usted puede mirar hacia atr√°s y modificar su forma de beber a trav√©s de la historia del calendario desplazador. Puede eliminar una entrada, incluso si ha cometido un error, por agitaci√≥n de la pantalla. Si el tel√©fono a su vez, el modo horizontal, ver√° un resumen gr√°fico puro de todos su historia. 
 
-Si te gusta personalizar, usted puede configurar su propios objetivos, la cantidad que usted bebe a la vez, así como las unidades de medida que mejor le conviene. También hay instrucciones sobre cómo ponerse en marcha en caso de que los necesitan. 
+Si te gusta personalizar, usted puede configurar su propios objetivos, la cantidad que usted bebe a la vez, as√≠ como las unidades de medida que mejor le conviene. Tambi√©n hay instrucciones sobre c√≥mo ponerse en marcha en caso de que los necesitan. 
 
-CARACTERÍSTICAS 
+CARACTER√çSTICAS 
 
 - Interfaz simple y hermoso 
-- Fácil personalización 
-- Rápido para cargar 
-- Fácilmente accesible Historia 
-- Gráficos photorealistic 
-- Diversión Efectos 
-- Resumen gráfico 
-- Soporte de múltiples idiomas 
+- F√°cil personalizaci√≥n 
+- R√°pido para cargar 
+- F√°cilmente accesible Historia 
+- Gr√°ficos photorealistic 
+- Diversi√≥n Efectos 
+- Resumen gr√°fico 
+- Soporte de m√∫ltiples idiomas 
 
 ACTUALIZACIONES 
 
-Hidrato se está desarrollando activamente y nuevas características gráficas, así como impulsar las notificaciones para recordarle que debe tomar una copa se encuentran en desarrollo, y estará disponible como una actualización gratuita desde el momento en que estén dispuestos. 
+Hidrato se est√° desarrollando activamente y nuevas caracter√≠sticas gr√°ficas, as√≠ como impulsar las notificaciones para recordarle que debe tomar una copa se encuentran en desarrollo, y estar√° disponible como una actualizaci√≥n gratuita desde el momento en que est√©n dispuestos. 

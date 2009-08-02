@@ -15,7 +15,7 @@ Hai raggiunto il tuo obiettivo!
 Hai bevuto %@ oggi finora 
 Hai bevuto %@ 
 %@ Lasciato andare 
-Il tuo obiettivo è oggi %@ 
+Il tuo obiettivo √® oggi %@ 
 TOUCH QUI 
 per confermare l'aggiunta di 
 Impostazioni 
@@ -23,26 +23,26 @@ Impostazioni
 / / Questi sono gli header per ogni titolo tableview pagina 
 
 Misurazioni 
-La vostra unità di misura 
+La vostra unit√† di misura 
 Il tuo obiettivo quotidiano 
 La tua tazza di dimensioni 
 
-/ / Questi sono i piè di pagina per ogni titolo tableview pagina 
+/ / Questi sono i pi√® di pagina per ogni titolo tableview pagina 
 
-Toccare uno dei file da modificare è impostazioni. Maggiori informazioni su ogni impostazione è fornita entro. 
-Questo imposta l'unità di misura che tutti i liquidi importi visualizzati pollici NOTA: La misura 'di vetro' è fittizia, ma è lì per motivi di semplicità. 
-Questo imposta il valore di default che vi aspettate da bere in un giorno, sulla base delle vostre unità di misura scelta. Questo solo effetti il giorno ti trovi attualmente, in modo da poter cambiare questo deve ogni giorno che si desidera. 
-Questo set di quanto si beve per impostazione predefinita in una sola volta. L'importo del diritto è la quantità di questa selezione rappresenta, sulla base delle vostre unità di misura scelta. Questa può essere regolata al giorno se lo si desidera. 
+Toccare uno dei file da modificare √® impostazioni. Maggiori informazioni su ogni impostazione √® fornita entro. 
+Questo imposta l'unit√† di misura che tutti i liquidi importi visualizzati pollici NOTA: La misura 'di vetro' √® fittizia, ma √® l√¨ per motivi di semplicit√†. 
+Questo imposta il valore di default che vi aspettate da bere in un giorno, sulla base delle vostre unit√† di misura scelta. Questo solo effetti il giorno ti trovi attualmente, in modo da poter cambiare questo deve ogni giorno che si desidera. 
+Questo set di quanto si beve per impostazione predefinita in una sola volta. L'importo del diritto √® la quantit√† di questa selezione rappresenta, sulla base delle vostre unit√† di misura scelta. Questa pu√≤ essere regolata al giorno se lo si desidera. 
 
 / / Pagina titoli utilizzati su ogni pagina preferenza scelta 
 
-Unità 
+Unit√† 
 Daily Goal 
 Imbarcazione 
 
 / / Cella etichette sulle preferenze indice pagina 
 
-Unità 
+Unit√† 
 Il tuo obiettivo quotidiano 
 La vostra bevanda dimensione di default 
 
@@ -83,11 +83,11 @@ Ultimo giorno 365
 
 / / Giorno della settimana 
 
-Lunedì 
-Martedì 
-Mercoledì 
+Luned√¨ 
+Marted√¨ 
+Mercoled√¨ 
 GIO 
-Venerdì 
+Venerd√¨ 
 Sabato 
 Domenica 
 
@@ -115,24 +115,24 @@ Idrato vi aiuta a gestire il vostro quotidiano di acqua
 Istruzioni per iniziare 
 Toccare il bicchiere di aggiungere una nuova voce 
 I progressi sono visualizzati nella parte superiore della pagina 
-Per rimuovere una voce, è sufficiente scuotere il telefono cellulare 
-Tenendo il telefono in modalità orizzontale per visualizzare un riepilogo 
-Si può guardare indietro a giorni precedenti, scorrendo il calendario nella parte inferiore dello schermo 
-Doppia toccando sul calendario vi porterà al giorno corrente 
-Via le impostazioni dello schermo è possibile regolare: 
-L'unità di misura l'applicazione utilizza 
+Per rimuovere una voce, √® sufficiente scuotere il telefono cellulare 
+Tenendo il telefono in modalit√† orizzontale per visualizzare un riepilogo 
+Si pu√≤ guardare indietro a giorni precedenti, scorrendo il calendario nella parte inferiore dello schermo 
+Doppia toccando sul calendario vi porter√† al giorno corrente 
+Via le impostazioni dello schermo √® possibile regolare: 
+L'unit√† di misura l'applicazione utilizza 
 Il tuo attuale obiettivo per il giorno 
 La vostra bevanda dimensioni 
 Il vostro feedback 
-Idrato di personale in corso è un progetto che verrà esteso con nuove funzioni nel corso del tempo, attenzione per aggiornamenti gratuiti. Se manca qualcosa che potrebbe essere utile, si prega di contattare <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+Idrato di personale in corso √® un progetto che verr√† esteso con nuove funzioni nel corso del tempo, attenzione per aggiornamenti gratuiti. Se manca qualcosa che potrebbe essere utile, si prega di contattare <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
 
 / / Intro per iTunes 
 
-Avete bevuto abbastanza acqua oggi? Forse idrato può aiutare? 
+Avete bevuto abbastanza acqua oggi? Forse idrato pu√≤ aiutare? 
 
-Idrato vi aiuta a gestire il vostro quotidiano di acqua attraverso un bellissimo e semplice interfaccia. È possibile avviare la registrazione di tutti i giorni di acqua subito utilizzando il semplice preset. Tutte le principali funzioni sono facilmente accessibili dal sulla schermata principale. Si può semplicemente aggiungere nuove informazioni, con un paio di tocchi sullo schermo. Si può guardare indietro e modificare il bere storia attraverso il calendario scroller. Puoi anche rimuovere una voce, se hai fatto un errore, agitando lo schermo. Se si accende il telefono cellulare in modalità di paesaggio, si vedrà una accurata sintesi grafica di tutte le vostre storia. 
+Idrato vi aiuta a gestire il vostro quotidiano di acqua attraverso un bellissimo e semplice interfaccia. √à possibile avviare la registrazione di tutti i giorni di acqua subito utilizzando il semplice preset. Tutte le principali funzioni sono facilmente accessibili dal sulla schermata principale. Si pu√≤ semplicemente aggiungere nuove informazioni, con un paio di tocchi sullo schermo. Si pu√≤ guardare indietro e modificare il bere storia attraverso il calendario scroller. Puoi anche rimuovere una voce, se hai fatto un errore, agitando lo schermo. Se si accende il telefono cellulare in modalit√† di paesaggio, si vedr√† una accurata sintesi grafica di tutte le vostre storia. 
 
-Se si desidera personalizzare, è possibile impostare i propri obiettivi, l'importo si bere in una sola volta, così come le unità di misura che meglio si adatta. Vi è anche istruzioni su come andare avanti se ne hanno bisogno. 
+Se si desidera personalizzare, √® possibile impostare i propri obiettivi, l'importo si bere in una sola volta, cos√¨ come le unit√† di misura che meglio si adatta. Vi √® anche istruzioni su come andare avanti se ne hanno bisogno. 
 
 CARATTERISTICHE 
 
@@ -147,4 +147,4 @@ CARATTERISTICHE
 
 AGGIORNAMENTI 
 
-Idrato viene sviluppato attivamente, e le nuove caratteristiche grafiche, nonché le notifiche spinta a ricordare di avere un drink sono in fase di sviluppo, e sarà disponibile come aggiornamento gratuito, non appena saranno pronti.
+Idrato viene sviluppato attivamente, e le nuove caratteristiche grafiche, nonch√© le notifiche spinta a ricordare di avere un drink sono in fase di sviluppo, e sar√† disponibile come aggiornamento gratuito, non appena saranno pronti.

@@ -5,46 +5,46 @@ OK
 Getan 
 Oops 
 Abbrechen 
-Schließen 
-Öffnen 
+Schlie√üen 
+√ñffnen 
 Anleitung 
-Über 
-BERÜHREN SIE HIER, UM ZU KÜNDIGEN
-Sie müssen sich Hydrate 
+√úber 
+BER√úHREN SIE HIER, UM ZU K√úNDIGEN
+Sie m√ºssen sich Hydrate 
 Sie haben erreicht Ihr Ziel! 
 Sie haben getrunken %@ heute so weit 
 Sie haben tranken %@ 
 %@ zu gehen 
 Ihr Ziel heute ist %@ 
-BERÜHREN SIE HIER
-um zu bestätigen das Hinzufügen von 
+BER√úHREN SIE HIER
+um zu best√§tigen das Hinzuf√ºgen von 
 Einstellungen 
 
 // these are the header title for each tableview page
 
 Messungen 
-Ihre Maßeinheit 
-Ihr tägliches Ziel 
-Ihre Cup Größe 
+Ihre Ma√üeinheit 
+Ihr t√§gliches Ziel 
+Ihre Cup Gr√∂√üe 
 
 // these are the footer title for each tableview page
 
-Berühren Sie eine der Zeilen, um sie zu bearbeiten Einstellungen. Weitere Informationen zu jeder Einstellung ist innerhalb. 
-Hier wird die Maßeinheit, dass alle Mengen Flüssigkeit wird angezeigt in. Hinweis: Die Messung "Glas" ist fiktional, aber ist es der Einfachheit halber. 
-Hier wird die Standard-Betrag, den Sie erwarten, zu trinken an einem Tag, basierend auf von Ihnen gewählten Maßeinheit. Dies ist nur Auswirkungen der Tag, an dem Sie sich derzeit an, so können Sie dies jeden Tag, wenn Sie es wünschen. 
-Diese legt fest, wie viel Sie trinken standardmäßig in einem Rutsch. Die Höhe auf der rechten Seite ist die, wie viel dieser Auswahl stellt, basierend auf von Ihnen gewählten Maßeinheit. Dies kann täglich, wenn Sie es wünschen. 
+Ber√ºhren Sie eine der Zeilen, um sie zu bearbeiten Einstellungen. Weitere Informationen zu jeder Einstellung ist innerhalb. 
+Hier wird die Ma√üeinheit, dass alle Mengen Fl√ºssigkeit wird angezeigt in. Hinweis: Die Messung "Glas" ist fiktional, aber ist es der Einfachheit halber. 
+Hier wird die Standard-Betrag, den Sie erwarten, zu trinken an einem Tag, basierend auf von Ihnen gew√§hlten Ma√üeinheit. Dies ist nur Auswirkungen der Tag, an dem Sie sich derzeit an, so k√∂nnen Sie dies jeden Tag, wenn Sie es w√ºnschen. 
+Diese legt fest, wie viel Sie trinken standardm√§√üig in einem Rutsch. Die H√∂he auf der rechten Seite ist die, wie viel dieser Auswahl stellt, basierend auf von Ihnen gew√§hlten Ma√üeinheit. Dies kann t√§glich, wenn Sie es w√ºnschen. 
 
 // page titles used on each preference choice page
 
 Einheiten 
-Täglich Tor 
+T√§glich Tor 
 Schiff 
 
 // cell labels used on preferences index page
 
 Einheiten 
-Ihr tägliches Ziel 
-Ihr Standard-Getränk Größe 
+Ihr t√§gliches Ziel 
+Ihr Standard-Getr√§nk Gr√∂√üe 
 
 // the different cup types available 
 
@@ -52,12 +52,12 @@ Ein Glas
 A kann 
 Eine kleine Flasche 
 Ein Medium Flasche 
-Eine große Flasche 
+Eine gro√üe Flasche 
 
 // the different measurements available
 
 Glas 
-Gläser 
+Gl√§ser 
 Milliliter 
 Liter 
 Pints 
@@ -72,7 +72,7 @@ Sie sind die Beseitigung der letzten Eintrag aus dem aktuell angezeigten Tag?
 // Archive views labels 
 
 Ihre Fortschritte Zusammenfassung 
-Anzeigen, wie viel Sie tatsächlich getrunken VS Ihr Ziel 
+Anzeigen, wie viel Sie tats√§chlich getrunken VS Ihr Ziel 
 Letzte 24 Stunden 
 Letzte 48 Stunden 
 Letzte 7 Tage 
@@ -95,9 +95,9 @@ Sonntag
 
 Januar 
 Februar 
-März 
+M√§rz 
 April 
-Dürfen 
+D√ºrfen 
 Juni 
 Juli 
 August 
@@ -111,35 +111,35 @@ Dezember
 Entwicklung und Design 
 Design 
 3-D-Rendering Glas 
-Hydrat hilft Ihnen bei der Verwaltung Ihrer täglichen Wasseraufnahme 
-Hinweise für den Anfang 
+Hydrat hilft Ihnen bei der Verwaltung Ihrer t√§glichen Wasseraufnahme 
+Hinweise f√ºr den Anfang 
 Tippen Sie auf das Trinkglas, um einen neuen Eintrag 
 Der Fortschritt wird am oberen Rand der Seite 
-So entfernen Sie einen Eintrag, schütteln Sie das Telefon 
+So entfernen Sie einen Eintrag, sch√ºtteln Sie das Telefon 
 Halten Sie das Telefon im Querformat wird eine Zusammenfassung 
-Sie können sich wieder am letzten Tage, den Kalender, indem Sie am unteren Rand des Bildschirms 
-Doppel-Tippen auf den Kalender bringt Sie zurück zu den aktuellen Tag 
-Über die Einstellungen können Sie: 
+Sie k√∂nnen sich wieder am letzten Tage, den Kalender, indem Sie am unteren Rand des Bildschirms 
+Doppel-Tippen auf den Kalender bringt Sie zur√ºck zu den aktuellen Tag 
+√úber die Einstellungen k√∂nnen Sie: 
 Die Einheit der Messungen das Programm verwendet 
-Ihr aktuelles Ziel für den Tag 
-Ihr Getränk Größe 
+Ihr aktuelles Ziel f√ºr den Tag 
+Ihr Getr√§nk Gr√∂√üe 
 Ihr Feedback 
-Hydrat ist ein persönliches Projekt, das laufend erweitert wird mit den neuen Eigenschaften im Laufe der Zeit, Achten Sie auf kostenlose Updates. Wenn es etwas fehlt, dass Sie denken, dass wäre sinnvoll, wenden Sie sich bitte an <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+Hydrat ist ein pers√∂nliches Projekt, das laufend erweitert wird mit den neuen Eigenschaften im Laufe der Zeit, Achten Sie auf kostenlose Updates. Wenn es etwas fehlt, dass Sie denken, dass w√§re sinnvoll, wenden Sie sich bitte an <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
 
 // intro for itunes 
 
 Haben Sie genug Wasser getrunken heute? Vielleicht Hydrate kann helfen? 
 
-Hydrat hilft Ihnen bei der Verwaltung Ihrer täglichen Wasseraufnahme durch eine attraktive und einfache Schnittstelle. Start der Anmeldung Ihrer täglichen Wasseraufnahme sofort mit der einfachen Presets. Alle wichtigen Funktionen sind leicht zugänglich von der Haupt-Bildschirm. Fügen Sie einfach neue Informationen mit ein paar Noten auf dem Bildschirm, oder können sich zurück und bearbeiten Sie Ihre Trinken Geschichte über den Kalender Scrollers. Sie können auch einen Eintrag zu entfernen, wenn Sie einen Fehler gemacht haben, durch Schütteln des Telefons. Sehen Sie sich eine grafische Zusammenfassung, indem Sie Ihr Telefon mit Landscape-Modus. 
+Hydrat hilft Ihnen bei der Verwaltung Ihrer t√§glichen Wasseraufnahme durch eine attraktive und einfache Schnittstelle. Start der Anmeldung Ihrer t√§glichen Wasseraufnahme sofort mit der einfachen Presets. Alle wichtigen Funktionen sind leicht zug√§nglich von der Haupt-Bildschirm. F√ºgen Sie einfach neue Informationen mit ein paar Noten auf dem Bildschirm, oder k√∂nnen sich zur√ºck und bearbeiten Sie Ihre Trinken Geschichte √ºber den Kalender Scrollers. Sie k√∂nnen auch einen Eintrag zu entfernen, wenn Sie einen Fehler gemacht haben, durch Sch√ºtteln des Telefons. Sehen Sie sich eine grafische Zusammenfassung, indem Sie Ihr Telefon mit Landscape-Modus. 
 
-Wenn Sie gerne anpassen, können Sie Ihre eigenen Ziele, den Betrag, den Sie trinken zu einer Zeit, als auch die Einheiten im Messwesen, der am besten für Sie. Es gibt auch Anleitungen, wie man sich, wenn Sie sie brauchen.
+Wenn Sie gerne anpassen, k√∂nnen Sie Ihre eigenen Ziele, den Betrag, den Sie trinken zu einer Zeit, als auch die Einheiten im Messwesen, der am besten f√ºr Sie. Es gibt auch Anleitungen, wie man sich, wenn Sie sie brauchen.
 
 BESONDERHEITEN 
 
-- Einfache und Schöne Interface 
+- Einfache und Sch√∂ne Interface 
 - Einfache Anpassung 
 - Fast zu laden 
-- Leicht zugänglich Geschichte 
+- Leicht zug√§nglich Geschichte 
 - Fotorealistische Grafik 
 - Fun-Effekte 
 - Grafische Zusammenfassung 
@@ -147,4 +147,4 @@ BESONDERHEITEN
 
 UPDATES 
 
-Hydrat wird aktiv entwickelt, und neue grafische Features wie Push-Benachrichtigungen, um Sie daran erinnern, zu einem Drink in der Entwicklung sind, und wird als kostenloses Upgrade, sobald sie dafür bereit sind. 
+Hydrat wird aktiv entwickelt, und neue grafische Features wie Push-Benachrichtigungen, um Sie daran erinnern, zu einem Drink in der Entwicklung sind, und wird als kostenloses Upgrade, sobald sie daf√ºr bereit sind. 
