@@ -1,151 +1,150 @@
+// General Text 
 
-/ / Testo generale 
-
-Idrato 
+Hydrat 
 OK 
-Fatto 
+Getan 
 Oops 
-Annulla 
-Chiudere 
-Aprire 
-Istruzioni per l'uso 
-Circa 
-Toccare qui per annullare 
-Hai bisogno di acqua
-Hai raggiunto il tuo obiettivo! 
-Hai bevuto %@ oggi finora 
-Hai bevuto %@ 
-%@ a bere ancora 
-Il tuo obiettivo  oggi è %@ 
-TOCCARE QUI 
-per confermare l'aggiunta di 
-Impostazioni 
+Abbrechen 
+Schlie√üen 
+√ñffnen 
+Anleitung 
+√úber 
+BER√úHREN SIE HIER, UM ZU K√úNDIGEN
+Sie m√ºssen sich Hydrate 
+Sie haben erreicht Ihr Ziel! 
+Sie haben getrunken %@ heute so weit 
+Sie haben tranken %@ 
+%@ zu gehen 
+Ihr Ziel heute ist %@ 
+BER√úHREN SIE HIER
+um zu best√§tigen das Hinzuf√ºgen von 
+Einstellungen 
 
-/ / Questi sono gli header per ogni pagina tableview 
+// these are the header title for each tableview page
 
-Misurazioni 
-La tua unità di misura 
-Il tuo obiettivo quotidiano 
-Dimensioni della tua tazza
+Messungen 
+Ihre Ma√üeinheit 
+Ihr t√§gliches Ziel 
+Ihre Cup Gr√∂√üe 
 
-/ / Questi sono i piedi di pagina per ogni pagina tableview 
+// these are the footer title for each tableview page
 
-Toccare uno dei file da modificare le impostazioni. Più informazioni su ogni impostazione  è fornita entro. 
-Così si imposta l'unità di misura che tutti i liquidi importi visualizzati pollici NOTA: La misura 'bicchiere' è fittizia – è incluso per motivi di semplicità. 
-Così si imposta il valore default che aspetti  bere in un giorno, sulla base della tua  unità di misura scelta. Influenza solo  il giorno attuale, dunque puoi cambiarlo ogni giorno se lo vuoi. 
-Così si imposta la quantità default. L'importo a destra è la quantità rappresentata per questa selezione, sulla base della tua unità di misura scelta. Questa si può  regolare ogni giorno se lo vuoi. 
+Ber√ºhren Sie eine der Zeilen, um sie zu bearbeiten Einstellungen. Weitere Informationen zu jeder Einstellung ist innerhalb. 
+Hier wird die Ma√üeinheit, dass alle Mengen Fl√ºssigkeit wird angezeigt in. Hinweis: Die Messung "Glas" ist fiktional, aber ist es der Einfachheit halber. 
+Hier wird die Standard-Betrag, den Sie erwarten, zu trinken an einem Tag, basierend auf von Ihnen gew√§hlten Ma√üeinheit. Dies ist nur Auswirkungen der Tag, an dem Sie sich derzeit an, so k√∂nnen Sie dies jeden Tag, wenn Sie es w√ºnschen. 
+Diese legt fest, wie viel Sie trinken standardm√§√üig in einem Rutsch. Die H√∂he auf der rechten Seite ist die, wie viel dieser Auswahl stellt, basierend auf von Ihnen gew√§hlten Ma√üeinheit. Dies kann t√§glich, wenn Sie es w√ºnschen. 
 
-/ / titoli Pagina utilizzati su ogni pagina preferenza scelta 
+// page titles used on each preference choice page
 
-Unità 
-Il tuo obiettivo quotidiano 
+Einheiten 
+T√§glich Tor 
+Schiff 
 
-Bicchiere
+// cell labels used on preferences index page
 
-/ / etichette Cella sulle pagina indice preferenze 
+Einheiten 
+Ihr t√§gliches Ziel 
+Ihr Standard-Getr√§nk Gr√∂√üe 
 
-Unità 
-Il tuo obiettivo quotidiano 
-Dimensione bevanda  default 
+// the different cup types available 
 
-/ / I vari tipi tazza disponibili
+Ein Glas 
+A kann 
+Eine kleine Flasche 
+Ein Medium Flasche 
+Eine gro√üe Flasche 
 
-Un bicchiere
-Una lattina
-Una bottiglietta 
-una bottiglia media
-Una grande bottiglia 
+// the different measurements available
 
-/ / Le varie misure disponibili 
+Glas 
+Gl√§ser 
+Milliliter 
+Liter 
+Pints 
+US-Cups 
+Unzen 
 
-Bicchiere 
-Bicchieri 
-Millilitri 
-Litri 
-Pinte 
-Tazze americane 
-Ounces 
+// cancel event alert view text 
 
-/ / Evento di avviso vista annullare testo 
+Entfernen Letzter Eintrag 
+Sie sind die Beseitigung der letzten Eintrag aus dem aktuell angezeigten Tag? 
 
-Rimuovere Ultima Entrata 
-Vuoi rimuovere l'ultima entrata?  
+// Archive views labels 
 
-/ / Archivio opinioni etichette 
+Ihre Fortschritte Zusammenfassung 
+Anzeigen, wie viel Sie tats√§chlich getrunken VS Ihr Ziel 
+Letzte 24 Stunden 
+Letzte 48 Stunden 
+Letzte 7 Tage 
+Letzte 30 Tage 
+Letzte 60 Tage 
+Letzte 182 Tage 
+Letzten 365 Tagen 
 
-Sommario del tuo progresso 
-Quanto hai bevuto contro al tuo obiettivo
-Ultime 24 ore 
-Ultime 48 ore 
-Ultimi 7 giorni 
-Ultimi 30 giorni 
-Ultimi 60 giorni 
-Ultimi 182 giorni 
-Ultimi 365 giorni  
+// days of the week 
 
-/ / Giorno della settimana 
+Montag 
+Dienstag 
+Mittwoch 
+DO 
+Freitag 
+Samstag 
+Sonntag 
 
-Lunedì 
-Martedì  
-Mercoledì  
-Giovedì 
-Venerdì  
-Sabato 
-Domenica 
+// months of year 
 
-/ / Mese dell'anno 
+Januar 
+Februar 
+M√§rz 
+April 
+D√ºrfen 
+Juni 
+Juli 
+August 
+Septeber 
+Oktober 
+November 
+Dezember 
 
-Gennaio 
-Febbraio 
-Marzo 
-Aprile 
-Maggio 
-Giugno 
-Luglio 
-Agosto 
-Settembre 
-Ottobre 
-Novembre 
-Dicembre 
+// other text 
 
-/ / Altro testo 
+Entwicklung und Design 
+Design 
+3-D-Rendering Glas 
+Hydrat hilft Ihnen bei der Verwaltung Ihrer t√§glichen Wasseraufnahme 
+Hinweise f√ºr den Anfang 
+Tippen Sie auf das Trinkglas, um einen neuen Eintrag 
+Der Fortschritt wird am oberen Rand der Seite 
+So entfernen Sie einen Eintrag, sch√ºtteln Sie das Telefon 
+Halten Sie das Telefon im Querformat wird eine Zusammenfassung 
+Sie k√∂nnen sich wieder am letzten Tage, den Kalender, indem Sie am unteren Rand des Bildschirms 
+Doppel-Tippen auf den Kalender bringt Sie zur√ºck zu den aktuellen Tag 
+√úber die Einstellungen k√∂nnen Sie: 
+Die Einheit der Messungen das Programm verwendet 
+Ihr aktuelles Ziel f√ºr den Tag 
+Ihr Getr√§nk Gr√∂√üe 
+Ihr Feedback 
+Hydrat ist ein pers√∂nliches Projekt, das laufend erweitert wird mit den neuen Eigenschaften im Laufe der Zeit, Achten Sie auf kostenlose Updates. Wenn es etwas fehlt, dass Sie denken, dass w√§re sinnvoll, wenden Sie sich bitte an <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
 
-Sviluppo e disegno 
-Disegno 
-3-D  Rendering di bicchiere 
-Idrato ti aiuta a gestire il tuo quotidiano di acqua 
-Istruzioni per cominciare
-Toccare il bicchiere per aggiungere una nuova voce 
-Il progresso si vede alla testa della pagina 
-Per rimuovere una voce, puoi scuotere il telefono cellulare 
-Tenere il telefono in modalità orizzontale per visualizzare un sommario 
-Si può guardare  giorni precedenti, scorrendo il calendario in fondo dello schermo 
-Doppia toccando sul calendario vi porterà al giorno corrente 
-Per le impostazioni dello schermo è possibile regolare: 
-L'unità di misura  utilizzata 
-Il tuo obiettivo per il giorno 
-dimensioni della tua bevanda
-Il tuo feedback 
-Idrato è uu proietto personale in corso di svillupamento che verrà esteso con nuove funzioni nel corso del tempo, attenzione per aggiornamenti gratuiti. Se manca qualcosa che potrebbe essere utile, si prega di contattare <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+// intro for itunes 
 
-/ / Intro per iTunes 
+Haben Sie genug Wasser getrunken heute? Vielleicht Hydrate kann helfen? 
 
-Hai bevuto abbastanza acqua oggi? Forse idrato può aiutare? 
+Hydrat hilft Ihnen bei der Verwaltung Ihrer t√§glichen Wasseraufnahme durch eine attraktive und einfache Schnittstelle. Start der Anmeldung Ihrer t√§glichen Wasseraufnahme sofort mit der einfachen Presets. Alle wichtigen Funktionen sind leicht zug√§nglich von der Haupt-Bildschirm. F√ºgen Sie einfach neue Informationen mit ein paar Noten auf dem Bildschirm, oder k√∂nnen sich zur√ºck und bearbeiten Sie Ihre Trinken Geschichte √ºber den Kalender Scrollers. Sie k√∂nnen auch einen Eintrag zu entfernen, wenn Sie einen Fehler gemacht haben, durch Sch√ºtteln des Telefons. Sehen Sie sich eine grafische Zusammenfassung, indem Sie Ihr Telefon mit Landscape-Modus. 
 
-Idrato ti aiuta a gestire il tuo quotidiano di acqua attraverso un bellissimo e semplice interfaccia. Puoi cominciare subito utilizzando i semplice preset. Tutte le principali funzioni sono facilmente accessibili dal schermo principale. Si può semplicemente aggiungere nuove informazioni, con un paio di tocchi sullo schermo. Si pu ò guardare indietro e modificare la storia bere attraverso il calendario scroller. Puoi anche rimuovere una voce, se hai fatto un errore, agitando lo schermo. In moda orrizontale, , si vedrà una accurata sintesi grafica di tutte le vostre storia. 
+Wenn Sie gerne anpassen, k√∂nnen Sie Ihre eigenen Ziele, den Betrag, den Sie trinken zu einer Zeit, als auch die Einheiten im Messwesen, der am besten f√ºr Sie. Es gibt auch Anleitungen, wie man sich, wenn Sie sie brauchen.
 
-Se si desidera personalizzare, è possibile impostare i propri obiettivi, l'importo da bere in una volta, così come le unità di misura che meglio si adatta. Ci sono istruzioni su come andare avanti se ne hai bisogno. 
+BESONDERHEITEN 
 
-CARATTERISTICHE 
+- Einfache und Sch√∂ne Interface 
+- Einfache Anpassung 
+- Fast zu laden 
+- Leicht zug√§nglich Geschichte 
+- Fotorealistische Grafik 
+- Fun-Effekte 
+- Grafische Zusammenfassung 
+- Multi Language Support 
 
-- Interfaccia semplice e bella 
-- personalizzazione Facile 
-- carico veloce 
-- Storia Facilmente accessibile 
-- Grafica fotorealistica 
-- Effetti divertenti
-- Sintesi grafica 
+UPDATES 
 
-AGGIORNAMENTI 
-
-Idrato viene sviluppato attivamente, e le nuove caratteristiche grafiche, nonchè le notifiche spinta a ricordare di bere sono in fase di sviluppo, e vengono disponibile come aggiornamento gratuito, non appena saranno pronti.
+Hydrat wird aktiv entwickelt, und neue grafische Features wie Push-Benachrichtigungen, um Sie daran erinnern, zu einem Drink in der Entwicklung sind, und wird als kostenloses Upgrade, sobald sie daf√ºr bereit sind. 
