@@ -1,3 +1,4 @@
+
 / / Testo generale 
 
 Idrato 
@@ -6,88 +7,89 @@ Fatto
 Oops 
 Annulla 
 Chiudere 
-Aperto 
+Aprire 
 Istruzioni per l'uso 
 Circa 
-TOUCH qui per cancellare la 
-Hai bisogno di idrato 
+Toccare qui per annullare 
+Hai bisogno di acqua
 Hai raggiunto il tuo obiettivo! 
 Hai bevuto %@ oggi finora 
 Hai bevuto %@ 
-%@ Lasciato andare 
-Il tuo obiettivo √® oggi %@ 
-TOUCH QUI 
+%@ a bere ancora 
+Il tuo obiettivo  oggi è %@ 
+TOCCARE QUI 
 per confermare l'aggiunta di 
 Impostazioni 
 
-/ / Questi sono gli header per ogni titolo tableview pagina 
+/ / Questi sono gli header per ogni pagina tableview 
 
 Misurazioni 
-La vostra unit√† di misura 
+La tua unità di misura 
 Il tuo obiettivo quotidiano 
-La tua tazza di dimensioni 
+Dimensioni della tua tazza
 
-/ / Questi sono i pi√® di pagina per ogni titolo tableview pagina 
+/ / Questi sono i piedi di pagina per ogni pagina tableview 
 
-Toccare uno dei file da modificare √® impostazioni. Maggiori informazioni su ogni impostazione √® fornita entro. 
-Questo imposta l'unit√† di misura che tutti i liquidi importi visualizzati pollici NOTA: La misura 'di vetro' √® fittizia, ma √® l√¨ per motivi di semplicit√†. 
-Questo imposta il valore di default che vi aspettate da bere in un giorno, sulla base delle vostre unit√† di misura scelta. Questo solo effetti il giorno ti trovi attualmente, in modo da poter cambiare questo deve ogni giorno che si desidera. 
-Questo set di quanto si beve per impostazione predefinita in una sola volta. L'importo del diritto √® la quantit√† di questa selezione rappresenta, sulla base delle vostre unit√† di misura scelta. Questa pu√≤ essere regolata al giorno se lo si desidera. 
+Toccare uno dei file da modificare le impostazioni. Più informazioni su ogni impostazione  è fornita entro. 
+Così si imposta l'unità di misura che tutti i liquidi importi visualizzati pollici NOTA: La misura 'bicchiere' è fittizia – è incluso per motivi di semplicità. 
+Così si imposta il valore default che aspetti  bere in un giorno, sulla base della tua  unità di misura scelta. Influenza solo  il giorno attuale, dunque puoi cambiarlo ogni giorno se lo vuoi. 
+Così si imposta la quantità default. L'importo a destra è la quantità rappresentata per questa selezione, sulla base della tua unità di misura scelta. Questa si può  regolare ogni giorno se lo vuoi. 
 
-/ / Pagina titoli utilizzati su ogni pagina preferenza scelta 
+/ / titoli Pagina utilizzati su ogni pagina preferenza scelta 
 
-Unit√† 
-Daily Goal 
-Imbarcazione 
-
-/ / Cella etichette sulle preferenze indice pagina 
-
-Unit√† 
+Unità 
 Il tuo obiettivo quotidiano 
-La vostra bevanda dimensione di default 
 
-/ / I vari tipi disponibili tazza 
+Bicchiere
 
-A vetro 
-Una possibile 
+/ / etichette Cella sulle pagina indice preferenze 
+
+Unità 
+Il tuo obiettivo quotidiano 
+Dimensione bevanda  default 
+
+/ / I vari tipi tazza disponibili
+
+Un bicchiere
+Una lattina
 Una bottiglietta 
-A medio Bottiglia 
+una bottiglia media
 Una grande bottiglia 
 
 / / Le varie misure disponibili 
 
-Vetro 
+Bicchiere 
 Bicchieri 
 Millilitri 
 Litri 
 Pinte 
-Tazze US 
+Tazze americane 
 Ounces 
 
 / / Evento di avviso vista annullare testo 
 
 Rimuovere Ultima Entrata 
-Sei rimuovere l'ultima voce da correntemente visualizzato giorno? 
+Vuoi rimuovere l'ultima entrata?  
 
 / / Archivio opinioni etichette 
 
-I vostri progressi Sintesi 
-Risultati di quanto effettivamente si beveva vs il tuo obiettivo 
+Sommario del tuo progresso 
+Quanto hai bevuto contro al tuo obiettivo
 Ultime 24 ore 
 Ultime 48 ore 
 Ultimi 7 giorni 
 Ultimi 30 giorni 
 Ultimi 60 giorni 
-Ultimo giorno 182 
-Ultimo giorno 365 
+Ultimi 182 giorni 
+Ultimi 365 giorni  
 
 / / Giorno della settimana 
 
-Luned√¨ 
-Marted√¨ 
-Mercoled√¨ 
-GIO 
-Venerd√¨ 
+Lunedì 
+Martedì  
+Mercoledì  
+Giovedì 
+Venerdì  
 Sabato 
 Domenica 
 
@@ -95,9 +97,9 @@ Domenica
 
 Gennaio 
 Febbraio 
-Mar 
+Marzo 
 Aprile 
-Potere 
+Maggio 
 Giugno 
 Luglio 
 Agosto 
@@ -108,43 +110,42 @@ Dicembre
 
 / / Altro testo 
 
-Sviluppo e Design 
-Progettare 
-3-D di vetro Rendering 
-Idrato vi aiuta a gestire il vostro quotidiano di acqua 
-Istruzioni per iniziare 
-Toccare il bicchiere di aggiungere una nuova voce 
-I progressi sono visualizzati nella parte superiore della pagina 
-Per rimuovere una voce, √® sufficiente scuotere il telefono cellulare 
-Tenendo il telefono in modalit√† orizzontale per visualizzare un riepilogo 
-Si pu√≤ guardare indietro a giorni precedenti, scorrendo il calendario nella parte inferiore dello schermo 
-Doppia toccando sul calendario vi porter√† al giorno corrente 
-Via le impostazioni dello schermo √® possibile regolare: 
-L'unit√† di misura l'applicazione utilizza 
-Il tuo attuale obiettivo per il giorno 
-La vostra bevanda dimensioni 
-Il vostro feedback 
-Idrato di personale in corso √® un progetto che verr√† esteso con nuove funzioni nel corso del tempo, attenzione per aggiornamenti gratuiti. Se manca qualcosa che potrebbe essere utile, si prega di contattare <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
+Sviluppo e disegno 
+Disegno 
+3-D  Rendering di bicchiere 
+Idrato ti aiuta a gestire il tuo quotidiano di acqua 
+Istruzioni per cominciare
+Toccare il bicchiere per aggiungere una nuova voce 
+Il progresso si vede alla testa della pagina 
+Per rimuovere una voce, puoi scuotere il telefono cellulare 
+Tenere il telefono in modalità orizzontale per visualizzare un sommario 
+Si può guardare  giorni precedenti, scorrendo il calendario in fondo dello schermo 
+Doppia toccando sul calendario vi porterà al giorno corrente 
+Per le impostazioni dello schermo è possibile regolare: 
+L'unità di misura  utilizzata 
+Il tuo obiettivo per il giorno 
+dimensioni della tua bevanda
+Il tuo feedback 
+Idrato è uu proietto personale in corso di svillupamento che verrà esteso con nuove funzioni nel corso del tempo, attenzione per aggiornamenti gratuiti. Se manca qualcosa che potrebbe essere utile, si prega di contattare <a href=mailto:hydrate@whomwah.com> hydrate@whomwah.com </ a> 
 
 / / Intro per iTunes 
 
-Avete bevuto abbastanza acqua oggi? Forse idrato pu√≤ aiutare? 
+Hai bevuto abbastanza acqua oggi? Forse idrato può aiutare? 
 
-Idrato vi aiuta a gestire il vostro quotidiano di acqua attraverso un bellissimo e semplice interfaccia. √à possibile avviare la registrazione di tutti i giorni di acqua subito utilizzando il semplice preset. Tutte le principali funzioni sono facilmente accessibili dal sulla schermata principale. Si pu√≤ semplicemente aggiungere nuove informazioni, con un paio di tocchi sullo schermo. Si pu√≤ guardare indietro e modificare il bere storia attraverso il calendario scroller. Puoi anche rimuovere una voce, se hai fatto un errore, agitando lo schermo. Se si accende il telefono cellulare in modalit√† di paesaggio, si vedr√† una accurata sintesi grafica di tutte le vostre storia. 
+Idrato ti aiuta a gestire il tuo quotidiano di acqua attraverso un bellissimo e semplice interfaccia. Puoi cominciare subito utilizzando i semplice preset. Tutte le principali funzioni sono facilmente accessibili dal schermo principale. Si può semplicemente aggiungere nuove informazioni, con un paio di tocchi sullo schermo. Si pu ò guardare indietro e modificare la storia bere attraverso il calendario scroller. Puoi anche rimuovere una voce, se hai fatto un errore, agitando lo schermo. In moda orrizontale, , si vedrà una accurata sintesi grafica di tutte le vostre storia. 
 
-Se si desidera personalizzare, √® possibile impostare i propri obiettivi, l'importo si bere in una sola volta, cos√¨ come le unit√† di misura che meglio si adatta. Vi √® anche istruzioni su come andare avanti se ne hanno bisogno. 
+Se si desidera personalizzare, è possibile impostare i propri obiettivi, l'importo da bere in una volta, così come le unità di misura che meglio si adatta. Ci sono istruzioni su come andare avanti se ne hai bisogno. 
 
 CARATTERISTICHE 
 
 - Interfaccia semplice e bella 
-- Facile personalizzazione 
-- A carico di Fast 
-- Facilmente accessibili Storia 
+- personalizzazione Facile 
+- carico veloce 
+- Storia Facilmente accessibile 
 - Grafica fotorealistica 
-- Divertimento Effetti 
+- Effetti divertenti
 - Sintesi grafica 
-- Multi Language Support 
 
 AGGIORNAMENTI 
 
-Idrato viene sviluppato attivamente, e le nuove caratteristiche grafiche, nonch√© le notifiche spinta a ricordare di avere un drink sono in fase di sviluppo, e sar√† disponibile come aggiornamento gratuito, non appena saranno pronti.
+Idrato viene sviluppato attivamente, e le nuove caratteristiche grafiche, nonchè le notifiche spinta a ricordare di bere sono in fase di sviluppo, e vengono disponibile come aggiornamento gratuito, non appena saranno pronti.
