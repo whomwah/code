@@ -18,7 +18,7 @@ set :use_sudo, false
 set :keep_releases, 2
 set :git_shallow_clone, 1
 
-ssh_options[:keys] = [ File.join( File.expand_path('~'), ".ssh", "slicehost" ) ]
+ssh_options[:keys] = [ File.join( File.expand_path('~'), ".ssh", "whomwah" ) ]
 ssh_options[:paranoid] = false
 
 namespace :deploy do
